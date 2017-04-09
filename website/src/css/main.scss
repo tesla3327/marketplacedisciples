@@ -1,0 +1,202 @@
+$base-font: 18px;
+$font-family: sans-serif;
+$rhythm: $base-font * 1.6;
+$gutter: $rhythm;
+
+body, html {
+	font-size: $base-font;
+	font-family: $font-family;
+	line-height: $rhythm;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 $rhythm;
+}
+
+body * {
+	box-sizing: border-box;
+	outline: none;
+}
+
+input {
+	font-family: $font-family;
+	font-size: $base-font;
+	line-height: $rhythm;
+	border-radius: 2px;
+	padding: 5px 10px;
+	margin: $rhythm * 0.5 0;
+}
+
+input[type=email] {
+	width: 100%;
+	margin-bottom: 0;
+	border: 1px solid darkgray;
+}
+
+input[type=submit] {
+	background: gray;
+	color: white;
+	padding: 5px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+/**
+ * Typography
+ */
+.h1, .h2, .h3, .h4, .h5 {
+	margin: 0;
+	padding: 0;
+}
+
+.h1 {
+	font-size: $base-font * 2.3;
+	line-height: $rhythm * 1.7;
+}
+
+.h1--title {
+	padding-bottom: $rhythm * 0.5;
+	text-align: center;
+}
+
+.h2 {
+	font-size: $base-font * 2;
+	line-height: $rhythm * 1.7;
+}
+
+.h2--title {
+	text-align: center;
+}
+
+.h3 {
+	font-size: $base-font * 1.5;
+	font-weight: normal;
+	line-height: $rhythm * 1.5;
+}
+
+.h4 {
+	font-size: $base-font;
+	font-weight: bold;
+	line-height: $rhythm * 1;
+	padding: ($rhythm * 0.5) 0 ($rhythm * 0.5) 0;
+}
+
+p {
+	margin: 0;
+	padding: 0 0 $rhythm 0;
+}
+
+.link {
+	font-size: $base-font;
+	line-height: $rhythm;
+}
+
+/**
+ * Components
+ */
+.section {
+	margin: $rhythm 0;
+	width: 100%;
+	max-width: 700px;
+}
+
+.section__title {
+	padding-bottom: $rhythm ;
+}
+
+.section--hero {
+	padding: 0;
+}
+
+.section--hero__tagline {
+	padding-top: $rhythm * 0.5;
+	text-align: center;
+	font-size: $base-font * 1.2;
+}
+
+.section--interviews__interviews {
+	display: flex;
+	flex-direction: column;
+}
+
+.section--article__quote {
+	font-style: italic;
+}
+
+.section--signup,
+.section--signup .clear {
+	display: flex;
+	font-family: $font-family;
+	font-size: $base-font * 1.2;
+	font-weight: bold;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.section--signup #mc_embed_signup {
+	width: 100%;
+}
+
+.card {
+	padding: 0 0 ($rhythm * 2) 0;
+}
+
+.card__summary {
+	padding-bottom: 0;
+}
+
+.card__link {
+}
+
+/**
+ * Responsive!
+ */
+@media (min-width: 750px) {
+	.card {
+		padding-bottom: $rhythm * 3;
+	}
+}
+
+
+// @media (min-width: 1000px) {
+// 	.section {
+// 		width: 900px;
+// 		width: 80vw;
+// 	}
+
+// 	.section--interviews__interviews {
+// 		flex-direction: row;
+// 		flex-wrap: wrap;
+// 	}
+
+// 	.card {
+// 		$gutter: 40px;
+// 		width: calc(50% - #{$gutter});
+// 		margin-right: $gutter;
+
+// 		&:first-of-type {
+// 			padding-top: 0;
+// 		}
+// 	}
+// }
+
+// @media (min-width: 1200px) {
+// 	.section {
+// 		width: 900px;
+// 	}
+// }
+
+
+
+
+
+
+
+
+
