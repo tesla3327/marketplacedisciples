@@ -9,7 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 28.8px; }
+  padding: 0 0.5em;
+  margin-top: 50px; }
 
 body * {
   box-sizing: border-box;
@@ -50,6 +51,15 @@ input[type=submit] {
   padding-bottom: 14.4px;
   text-align: center; }
 
+.h1--nav-brand {
+  display: inline-block;
+  position: fixed;
+  font-size: 18px;
+  font-weight: bold;
+  top: 2px;
+  left: 0.5em;
+  z-index: 100; }
+
 .h2 {
   font-size: 36px;
   line-height: 48.96px; }
@@ -79,6 +89,56 @@ p {
 /**
  * Components
  */
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 0 0.5em;
+  border-bottom: 1px solid gray; }
+
+.nav__link-list {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.nav__list-item {
+  padding: 1em;
+  list-style: none;
+  float: right; }
+
+.nav__menu-toggle {
+  position: fixed;
+  top: 12px;
+  right: 0.5em;
+  z-index: 100; }
+
+#menu-toggle {
+  display: none; }
+
+.menu-overlay {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #DDD;
+  overflow: hidden;
+  z-index: 99; }
+
+#menu-toggle:checked ~ .menu-overlay {
+  opacity: 100;
+  pointer-events: auto;
+  transition: opacity 0.1s ease-out; }
+
+#menu-toggle:checked ~ .content {
+  overflow: hidden; }
+
 .section {
   margin: 28.8px 0;
   width: 100%;
@@ -99,9 +159,6 @@ p {
   display: flex;
   flex-direction: column; }
 
-.section--article__quote {
-  font-style: italic; }
-
 .section--signup,
 .section--signup .clear {
   display: flex;
@@ -114,6 +171,15 @@ p {
 
 .section--signup #mc_embed_signup {
   width: 100%; }
+
+.article__quote {
+  font-style: italic; }
+
+.article__divider {
+  margin: 2em auto 3em auto;
+  height: 1px;
+  width: 60%;
+  background: #CCC; }
 
 .card {
   padding: 0 0 57.6px 0; }

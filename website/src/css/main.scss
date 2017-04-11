@@ -15,7 +15,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0 $rhythm;
+	padding: 0 0.5em;
+  margin-top: 50px;
 }
 
 body * {
@@ -64,6 +65,17 @@ input[type=submit] {
 	text-align: center;
 }
 
+.h1--nav-brand {
+  display: inline-block;
+  // display: none;
+  position: fixed;
+  font-size: $base-font;
+  font-weight: bold;
+  top: 2px;
+  left: 0.5em;
+  z-index: 100;
+}
+
 .h2 {
 	font-size: $base-font * 2;
 	line-height: $rhythm * 1.7;
@@ -99,6 +111,66 @@ p {
 /**
  * Components
  */
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 0 0.5em;
+  border-bottom: 1px solid gray;
+}
+
+.nav__link-list {
+  // display: inline-block;
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list-item {
+  padding: 1em;
+  list-style: none;
+  float: right;
+}
+
+.nav__menu-toggle {
+  position: fixed;
+  top: 12px;
+  right: 0.5em;
+  z-index: 100;
+}
+
+// Don't display the menu checkbox
+#menu-toggle {
+  display: none;
+}
+
+.menu-overlay {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #DDD;
+  overflow: hidden;
+  z-index: 99;
+}
+
+#menu-toggle:checked ~ .menu-overlay {
+  opacity: 100;
+  pointer-events: auto;
+  transition: opacity 0.1s ease-out;
+}
+
+#menu-toggle:checked ~ .content {
+  overflow: hidden;
+}
+
 .section {
 	margin: $rhythm 0;
 	width: 100%;
@@ -106,7 +178,7 @@ p {
 }
 
 .section__title {
-	padding-bottom: $rhythm ;
+	padding-bottom: $rhythm;
 }
 
 .section--hero {
@@ -124,10 +196,6 @@ p {
 	flex-direction: column;
 }
 
-.section--article__quote {
-	font-style: italic;
-}
-
 .section--signup,
 .section--signup .clear {
 	display: flex;
@@ -141,6 +209,17 @@ p {
 
 .section--signup #mc_embed_signup {
 	width: 100%;
+}
+
+.article__quote {
+	font-style: italic;
+}
+
+.article__divider {
+  margin: 2em auto 3em auto;
+  height: 1px;
+  width: 60%;
+  background: #CCC;
 }
 
 .card {
