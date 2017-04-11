@@ -13,10 +13,16 @@
   </head>
   <body>
     <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="nav__menu-toggle">Menu</label>
-    <h1 class="h1 h1--nav-brand">Marketplace Disciples</h1>
+
+    <div class="nav__overlay">
+      <div class="nav__content">
+        <label for="menu-toggle" class="nav__menu-toggle">Menu</label>
+        <h1 class="h1 h1--nav-brand">Marketplace Disciples</h1>
+      </div>
+    </div>
 
     <nav class="menu-overlay">
+      <label for="menu-toggle" class="nav__menu-toggle nav__menu-toggle--overlay">&#x2715</label>
       <ul class="nav__link-list">
         <li class="nav__list-item"><a href="./index.html">Home</a></li>
         <li class="nav__list-item"><a href="./index.html">Interviews</a></li>

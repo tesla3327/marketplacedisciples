@@ -100,21 +100,26 @@ p {
   border-bottom: 1px solid gray; }
 
 .nav__link-list {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 50px 0 0 0; }
 
 .nav__list-item {
-  padding: 1em;
-  list-style: none;
-  float: right; }
+  padding: 1em 0;
+  list-style: none; }
 
 .nav__menu-toggle {
   position: fixed;
   top: 12px;
   right: 0.5em;
-  z-index: 100; }
+  z-index: 99; }
+
+.nav__menu-toggle--overlay {
+  right: 1em; }
 
 #menu-toggle {
   display: none; }
@@ -125,8 +130,8 @@ p {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
   background: #DDD;
   overflow: hidden;
   z-index: 99; }
@@ -192,6 +197,37 @@ p {
  */
 @media (min-width: 750px) {
   .card {
-    padding-bottom: 86.4px; } }
+    padding-bottom: 86.4px; }
+  .nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 99; }
+  .nav__content {
+    width: 700px;
+    margin: 0 auto;
+    height: 100%;
+    z-index: 99; }
+  .nav__menu-toggle,
+  .h1--nav-brand {
+    position: initial; }
+  .nav__menu-toggle {
+    float: right;
+    line-height: 50px; }
+  .nav__menu-toggle--overlay {
+    position: absolute;
+    left: 1em;
+    top: 0; }
+  .menu-overlay {
+    display: initial;
+    pointer-events: auto;
+    width: 500px;
+    right: -500px;
+    opacity: 100; }
+  #menu-toggle:checked ~ .menu-overlay {
+    right: 0;
+    transition: right 0.15s ease-in-out; } }
 
 /*# sourceMappingURL=main.css.map */
