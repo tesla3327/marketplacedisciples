@@ -1,12 +1,30 @@
 $base-font: 18px;
-$font-family: sans-serif;
-$rhythm: $base-font * 1.6;
+$font-family: 'Lora', sans-serif;
+$rhythm: $base-font * 1.8;
 $gutter: $rhythm;
+
+// Color palette
+$primary: #0f3248;
+$primary-light: #224962;
+$primary-lighter: #3C627A;
+
+$secondary: #0C4E2E;
+$accent: #d9bb26;
+$accent-dark: darken(saturate($accent, 10%), 15%);
+$accent-darkest: darken(saturate($accent, 10%), 25%);
+$accent-light: lighten(desaturate($accent, 5%), 15%);
+
+$body-text: #e7ebed;
+$body-text-dark: saturate(darken($body-text, 45%), 10%);
+
+@import url('https://fonts.googleapis.com/css?family=Rambla:400,700|Lora:400,400i,700,700i');
 
 body, html {
 	font-size: $base-font;
 	font-family: $font-family;
 	line-height: $rhythm;
+  background: $primary;
+  color: $body-text;
 	padding: 0;
 	margin: 0;
 }
@@ -15,8 +33,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0 0.5em;
-  margin-top: 50px;
+	padding: 50px 1em 0 1em;
+  margin: 0;
 }
 
 body * {
@@ -36,15 +54,29 @@ input {
 input[type=email] {
 	width: 100%;
 	margin-bottom: 0;
-	border: 1px solid darkgray;
+	// border: 1px solid $primary-lighter;
+  border: none;
+  background: rgba(0,0,0,0.3);
+  color: $body-text;
+
+  &::placeholder {
+    color: rgba($body-text, 0.6);
+  }
 }
 
 input[type=submit] {
-	background: gray;
-	color: white;
-	padding: 5px 20px;
+	background: $accent;
+	color: rgba(0,0,0,0.6);
+	padding: 5px 40px;
 	border: none;
 	cursor: pointer;
+  font-family: 'Rambla', sans-serif;
+  font-weight: 700;
+  font-size: $base-font * 1.1;
+  box-shadow:
+    1px 1px 0px $accent-darkest,
+    2px 2px 0px $accent-darkest,
+    0 10px 30px rgba(0,0,0,0.2);
 }
 
 /**
@@ -53,26 +85,37 @@ input[type=submit] {
 .h1, .h2, .h3, .h4, .h5 {
 	margin: 0;
 	padding: 0;
+  font-family: 'Rambla', sans-serif;
+  font-weight: 700;
 }
 
 .h1 {
-	font-size: $base-font * 2.3;
+	font-size: $base-font * 2.8;
 	line-height: $rhythm * 1.7;
 }
 
 .h1--title {
-	padding-bottom: $rhythm * 0.5;
+  // $text: $accent-dark;
+	// padding-bottom: $rhythm * 0.5;
 	text-align: center;
+  // color: $accent;
+  color: $body-text;
+  text-shadow:
+    1px 1px 0px $body-text-dark,
+    2px 2px 0px $body-text-dark,
+    0 10px 30px rgba(0,0,0,0.2);
 }
 
 .h1--nav-brand {
   display: inline-block;
   // display: none;
   position: fixed;
-  font-size: $base-font;
+  font-size: $base-font * 1.2;
   font-weight: bold;
+  line-height: 50px;
+  color: $body-text;
   top: 2px;
-  left: 0.5em;
+  left: 1.5rem;
   z-index: 100;
 }
 
@@ -86,16 +129,15 @@ input[type=submit] {
 }
 
 .h3 {
-	font-size: $base-font * 1.5;
-	font-weight: normal;
-	line-height: $rhythm * 1.5;
+	font-size: $base-font * 1.7;
+	font-weight: 400;
+	line-height: $rhythm * 1.7;
 }
 
 .h4 {
-	font-size: $base-font;
+	font-size: $base-font * 1.2;
 	font-weight: bold;
-	line-height: $rhythm * 1;
-	padding: ($rhythm * 0.5) 0 ($rhythm * 0.5) 0;
+	line-height: $rhythm * 1.2;
 }
 
 p {
@@ -106,6 +148,9 @@ p {
 .link {
 	font-size: $base-font;
 	line-height: $rhythm;
+  color: $body-text;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
 }
 
 /**
@@ -117,35 +162,45 @@ p {
   height: 50px;
   top: 0;
   left: 0;
-  background: white;
-  padding: 0 0.5em;
-  border-bottom: 1px solid gray;
+  // background: desaturate(lighten($primary, 10%), 10%);
+  background: $primary-light;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5)
 }
 
 .nav__link-list {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   text-align: center;
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 50px 0 0 0;
+  padding: 50px 0;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .nav__list-item {
-  padding: 1em 0;
+  color: $primary-light;
+  padding: 1rem 0;
   list-style: none;
+  text-decoration: none;
+  font-family: 'Rambla', sans-serif;
+  font-size: $base-font * 2;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
 }
 
 .nav__menu-toggle {
   position: fixed;
-  top: 12px;
-  right: 0.5em;
+  top: 11px;
+  right: 1.5rem;
   z-index: 99;
-}
-
-.nav__menu-toggle--overlay {
-  right: 1em;
+  font-family: 'Rambla', sans-serif;
+  font-weight: 700;
 }
 
 // Don't display the menu checkbox
@@ -154,6 +209,7 @@ p {
 }
 
 .menu-overlay {
+  color: $primary-light;
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -161,19 +217,23 @@ p {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #DDD;
+  background: $accent;
+  background-image: linear-gradient(
+    -200deg,
+    $accent-light,
+    $accent
+  );
   overflow: hidden;
   z-index: 99;
+  transform: scale(0.8);
+  transition: all 0.1s ease-out;
 }
 
 #menu-toggle:checked ~ .menu-overlay {
   opacity: 100;
   pointer-events: auto;
-  transition: opacity 0.1s ease-out;
-}
-
-#menu-toggle:checked ~ .content {
-  overflow: hidden;
+  transition: all 0.2s ease-out;
+  transform: scale(1);
 }
 
 .section {
@@ -183,7 +243,7 @@ p {
 }
 
 .section__title {
-	padding-bottom: $rhythm;
+
 }
 
 .section--hero {
@@ -193,7 +253,7 @@ p {
 .section--hero__tagline {
 	padding-top: $rhythm * 0.5;
 	text-align: center;
-	font-size: $base-font * 1.2;
+	font-size: $base-font * 1.3;
 }
 
 .section--interviews__interviews {
@@ -228,7 +288,20 @@ p {
 }
 
 .card {
-	padding: 0 0 ($rhythm * 2) 0;
+	margin: 0 -0.5em $rhythm -0.5em;
+  padding: 1em 1em 1.3em 1em;
+  border-radius: 4px;
+  // background: rgba($primary-light, 0.5);
+  background-image: linear-gradient(
+    to bottom,
+    rgba($primary-light, 0.6) 50%,
+    rgba($primary, 1)
+  );
+  box-shadow: 0 7px 20px rgba(0,0,0,0.2);
+}
+
+.card__title {
+  margin-bottom: $rhythm / 2;
 }
 
 .card__summary {
@@ -236,17 +309,41 @@ p {
 }
 
 .card__link {
+  display: inline-block;
+  line-height: calc(#{$base-font} + 8px);
+  margin-top: $rhythm / 2;
 }
 
 /**
  * Responsive!
  */
 @media (min-width: 750px) {
-	.card {
-		padding-bottom: $rhythm * 3;
-	}
+  input[type=submit] {
+    background: $accent;
+    transition: background 0.2s ease-in-out;
+    transform: translateY(0);
 
-  .nav__overlay {
+    &:hover {
+      background: $accent-light;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  .h1--title {
+    font-size: 10vw;
+    line-height: 11vw;
+    text-shadow:
+      1px 1px 0px $body-text-dark,
+      2px 2px 0px $body-text-dark,
+      3px 3px 0px $body-text-dark,
+      4px 4px 0px $body-text-dark,
+      0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -265,6 +362,7 @@ p {
   .nav__menu-toggle,
   .h1--nav-brand {
     position: initial;
+    cursor: pointer;
   }
 
   .nav__menu-toggle {
@@ -275,7 +373,17 @@ p {
   .nav__menu-toggle--overlay {
     position: absolute;
     left: 1em;
+    width: 10px;
     top: 0;
+  }
+
+  .nav__list-item {
+    padding: 2em 0;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      background: rgba(255,255,255,0.2);
+    }
   }
 
   .menu-overlay {
@@ -283,12 +391,45 @@ p {
     pointer-events: auto;
     width: 500px;
     right: -500px;
-    opacity: 100;
+    opacity: 0;
+    box-shadow: 0 0 100px rgba(0,0,0,0.5);
+    transform: none;
   }
 
   #menu-toggle:checked ~ .menu-overlay {
+    transform: none;
     right: 0;
-    transition: right 0.15s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 100;
+  }
+
+  .link {
+    position: relative;
+    border-bottom: none;
+
+    &::after, &::before  {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      transition: width 0.15s ease-out;
+    }
+
+    &::after {
+      left: 0;
+      width: 0%;
+      background: $accent;
+    }
+
+    &::before {
+      right: 0;
+      width: 100%;
+      background: currentColor;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 
@@ -315,11 +456,12 @@ p {
 // 	}
 // }
 
-// @media (min-width: 1200px) {
-// 	.section {
-// 		width: 900px;
-// 	}
-// }
+@media (min-width: 1000px) {
+	.h1--title {
+    font-size: 100px;
+    line-height: 110px;
+	}
+}
 
 
 
