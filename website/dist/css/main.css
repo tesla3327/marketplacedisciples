@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 1em 0 1em;
+  padding: 50px 1.5em 0 1.5em;
   margin: 0; }
 
 body * {
@@ -117,12 +117,12 @@ p {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
 
 .nav__link-list {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 50px 0; }
   .nav__link-list a {
@@ -151,6 +151,8 @@ p {
   display: none; }
 
 .menu-overlay {
+  display: flex;
+  flex-direction: column;
   color: #224962;
   opacity: 0;
   pointer-events: none;
@@ -159,12 +161,16 @@ p {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #d9bb26;
-  background-image: linear-gradient(-200deg, #e0cc6c, #d9bb26);
+  background: #e7ebed;
+  background-image: linear-gradient(-160deg, #e7ebed, rgba(60, 98, 122, 0.5));
   overflow: hidden;
   z-index: 99;
   transform: scale(0.8);
   transition: all 0.1s ease-out; }
+
+.menu-overlay__footer {
+  display: flex;
+  margin: 32.4px auto; }
 
 #menu-toggle:checked ~ .menu-overlay {
   opacity: 100;
@@ -176,6 +182,9 @@ p {
   margin: 32.4px 0;
   width: 100%;
   max-width: 700px; }
+
+.section--title {
+  margin: 48.6px 0; }
 
 .section--hero {
   padding: 0; }
@@ -199,23 +208,30 @@ p {
   align-items: center;
   text-align: center; }
 
+.section--signup {
+  margin-bottom: 64.8px; }
+
 .section--signup #mc_embed_signup {
   width: 100%; }
 
 .article__quote {
-  font-style: italic; }
+  font-style: italic;
+  padding: 0; }
 
 .article__divider {
-  margin: 2em auto 3em auto;
-  height: 1px;
-  width: 60%;
-  background: #CCC; }
+  margin: 2em auto 4em auto;
+  background: #e7ebed;
+  height: 30px;
+  background: #e7ebed;
+  background-image: linear-gradient(15deg, rgba(60, 98, 122, 0.8), #e7ebed);
+  transform: rotate(-15deg) skewX(-15deg);
+  width: 120px; }
 
 .card {
   margin: 0 -0.5em 32.4px -0.5em;
   padding: 1em 1em 1.3em 1em;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, rgba(34, 73, 98, 0.6) 50%, #0f3248);
+  background-image: linear-gradient(to bottom, rgba(34, 73, 98, 0.6), #0f3248);
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2); }
 
 .card__title {
@@ -232,6 +248,10 @@ p {
 /**
  * Responsive!
  */
+@media (min-width: 400px) {
+  .section--hero {
+    margin: 64.8px 0; } }
+
 @media (min-width: 750px) {
   input[type=submit] {
     background: #d9bb26;
@@ -245,6 +265,8 @@ p {
     font-size: 10vw;
     line-height: 11vw;
     text-shadow: 1px 1px 0px #5a8194, 2px 2px 0px #5a8194, 3px 3px 0px #5a8194, 4px 4px 0px #5a8194, 0 10px 30px rgba(0, 0, 0, 0.2); }
+  .section--title {
+    margin: 10vw 0; }
   .nav {
     position: fixed;
     top: 0;
@@ -275,7 +297,6 @@ p {
     .nav__list-item:hover {
       background: rgba(255, 255, 255, 0.2); }
   .menu-overlay {
-    display: initial;
     pointer-events: auto;
     width: 500px;
     right: -500px;
@@ -310,6 +331,8 @@ p {
 @media (min-width: 1000px) {
   .h1--title {
     font-size: 100px;
-    line-height: 110px; } }
+    line-height: 110px; }
+  .section--title {
+    margin: 100px 0; } }
 
 /*# sourceMappingURL=main.css.map */

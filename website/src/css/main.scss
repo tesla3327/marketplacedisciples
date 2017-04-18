@@ -33,7 +33,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 50px 1em 0 1em;
+	padding: 50px 1.5em 0 1.5em;
   margin: 0;
 }
 
@@ -162,18 +162,18 @@ p {
   height: 50px;
   top: 0;
   left: 0;
-  // background: desaturate(lighten($primary, 10%), 10%);
   background: $primary-light;
   box-shadow: 0 0 30px rgba(0,0,0,0.5)
 }
 
 .nav__link-list {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   margin: 0;
   padding: 50px 0;
 
@@ -209,6 +209,8 @@ p {
 }
 
 .menu-overlay {
+  display: flex;
+  flex-direction: column;
   color: $primary-light;
   opacity: 0;
   pointer-events: none;
@@ -217,16 +219,21 @@ p {
   right: 0;
   width: 100%;
   height: 100%;
-  background: $accent;
+  background: $body-text;
   background-image: linear-gradient(
-    -200deg,
-    $accent-light,
-    $accent
+    -160deg,
+    $body-text,
+    rgba($primary-lighter, 0.5)
   );
   overflow: hidden;
   z-index: 99;
   transform: scale(0.8);
   transition: all 0.1s ease-out;
+}
+
+.menu-overlay__footer {
+  display: flex;
+  margin: $rhythm auto;
 }
 
 #menu-toggle:checked ~ .menu-overlay {
@@ -242,8 +249,8 @@ p {
 	max-width: 700px;
 }
 
-.section__title {
-
+.section--title {
+  margin: $rhythm * 1.5 0;
 }
 
 .section--hero {
@@ -272,19 +279,31 @@ p {
 	text-align: center;
 }
 
+.section--signup {
+  margin-bottom: $rhythm * 2;
+}
+
 .section--signup #mc_embed_signup {
 	width: 100%;
 }
 
 .article__quote {
 	font-style: italic;
+  padding: 0;
 }
 
 .article__divider {
-  margin: 2em auto 3em auto;
-  height: 1px;
-  width: 60%;
-  background: #CCC;
+  margin: 2em auto 4em auto;
+  background: $body-text;    
+  height: 30px;
+  background: $body-text;
+  background-image: linear-gradient(
+    15deg,
+    rgba($primary-lighter, 0.8),
+    $body-text
+  );
+  transform: rotate(-15deg) skewX(-15deg);
+  width: 120px
 }
 
 .card {
@@ -294,7 +313,7 @@ p {
   // background: rgba($primary-light, 0.5);
   background-image: linear-gradient(
     to bottom,
-    rgba($primary-light, 0.6) 50%,
+    rgba($primary-light, 0.6),
     rgba($primary, 1)
   );
   box-shadow: 0 7px 20px rgba(0,0,0,0.2);
@@ -317,6 +336,12 @@ p {
 /**
  * Responsive!
  */
+@media (min-width: 400px) {
+  .section--hero {
+    margin: $rhythm * 2 0;
+  }
+}
+
 @media (min-width: 750px) {
   input[type=submit] {
     background: $accent;
@@ -341,6 +366,10 @@ p {
       3px 3px 0px $body-text-dark,
       4px 4px 0px $body-text-dark,
       0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .section--title {
+    margin: 10vw 0;
   }
 
   .nav {
@@ -387,7 +416,6 @@ p {
   }
 
   .menu-overlay {
-    display: initial;
     pointer-events: auto;
     width: 500px;
     right: -500px;
@@ -433,34 +461,15 @@ p {
   }
 }
 
-
-// @media (min-width: 1000px) {
-// 	.section {
-// 		width: 900px;
-// 		width: 80vw;
-// 	}
-
-// 	.section--interviews__interviews {
-// 		flex-direction: row;
-// 		flex-wrap: wrap;
-// 	}
-
-// 	.card {
-// 		$gutter: 40px;
-// 		width: calc(50% - #{$gutter});
-// 		margin-right: $gutter;
-
-// 		&:first-of-type {
-// 			padding-top: 0;
-// 		}
-// 	}
-// }
-
 @media (min-width: 1000px) {
 	.h1--title {
     font-size: 100px;
     line-height: 110px;
 	}
+
+  .section--title {
+    margin: 100px 0;
+  }
 }
 
 
