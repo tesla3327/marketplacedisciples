@@ -164,7 +164,8 @@ p {
   top: 0;
   left: 0;
   background: $primary-light;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5)
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  z-index: 10;
 }
 
 .nav__link-list {
@@ -304,7 +305,8 @@ p {
     $body-text
   );
   transform: rotate(-15deg) skewX(-15deg);
-  width: 120px
+  width: 120px;
+  z-index: 1;
 }
 
 .card {

@@ -115,7 +115,8 @@ p {
   top: 0;
   left: 0;
   background: #224962;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 10; }
 
 .nav__link-list {
   flex-grow: 1;
@@ -226,7 +227,8 @@ p {
   background: #e7ebed;
   background-image: linear-gradient(15deg, rgba(60, 98, 122, 0.8), #e7ebed);
   transform: rotate(-15deg) skewX(-15deg);
-  width: 120px; }
+  width: 120px;
+  z-index: 1; }
 
 .card {
   margin: 0 -0.5em 32.4px -0.5em;
