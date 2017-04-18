@@ -45,7 +45,8 @@ input[type=submit] {
   font-family: 'Rambla', sans-serif;
   font-weight: 700;
   font-size: 19.8px;
-  box-shadow: 1px 1px 0px #73620d, 2px 2px 0px #73620d, 0 10px 30px rgba(0, 0, 0, 0.2); }
+  box-shadow: 1px 1px 0px #73620d, 2px 2px 0px #73620d, 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: none; }
 
 /**
  * Typography
