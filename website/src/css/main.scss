@@ -27,6 +27,7 @@ body, html {
   color: $body-text;
 	padding: 0;
 	margin: 0;
+  overflow-anchor: none;
 }
 
 body {
@@ -125,8 +126,14 @@ input[type=submit] {
 	line-height: $rhythm * 1.7;
 }
 
-.h2--title {
+.h2--title, .h2--date {
 	text-align: center;
+}
+
+.h2--date {
+  color: rgba($body-text, 0.7);
+  font-weight: 400;
+  font-size: $base-font * 1.2;
 }
 
 .h3 {
@@ -136,9 +143,15 @@ input[type=submit] {
 }
 
 .h4 {
-	font-size: $base-font * 1.2;
-	font-weight: bold;
-	line-height: $rhythm * 1.2;
+  font-size: $base-font * 1.2;
+  font-weight: bold;
+  line-height: $rhythm * 1.2;
+}
+
+.h5 {
+  font-size: $base-font;
+  font-weight: 400;
+  line-height: $rhythm * 1.2;
 }
 
 p {
@@ -323,11 +336,17 @@ p {
 }
 
 .card__title {
-  margin-bottom: $rhythm / 2;
+  margin-top: 0.5em;
+  line-height: $base-font;
 }
 
 .card__summary {
 	padding-bottom: 0;
+}
+
+.card__date {
+  color: rgba($body-text, 0.7);
+  margin-bottom: $rhythm / 2;
 }
 
 .card__link {
@@ -373,6 +392,11 @@ p {
 
   .section--title {
     margin: 10vw 0;
+  }
+
+  .h2--date {
+    margin-top: $rhythm / 2;
+    font-size: 4vw;
   }
 
   .nav {
@@ -472,6 +496,10 @@ p {
 
   .section--title {
     margin: 100px 0;
+  }
+
+  .h2--date {
+    font-size: 40px;
   }
 }
 
