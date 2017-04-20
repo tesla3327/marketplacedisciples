@@ -23,7 +23,7 @@ body * {
 input {
   font-family: "Lora", sans-serif;
   font-size: 18px;
-  line-height: 32.4px;
+  height: 42.12px;
   border-radius: 2px;
   padding: 5px 10px;
   margin: 16.2px 0; }
@@ -34,7 +34,7 @@ input[type=email] {
   border: none;
   background: rgba(0, 0, 0, 0.3);
   color: #e7ebed; }
-  input[type=email]::placeholder {
+  input[type=email]::-moz-placeholder, input[type=email]::-ms-placeholder, input[type=email]::-webkit-placeholder, input[type=email]::placeholder {
     color: rgba(231, 235, 237, 0.6); }
 
 input[type=submit] {
@@ -183,6 +183,7 @@ p {
 
 .menu-overlay__footer {
   display: flex;
+  justify-content: center;
   margin: 32.4px auto; }
 
 #menu-toggle:checked ~ .menu-overlay {
@@ -303,7 +304,7 @@ p {
     z-index: 99; }
   .nav__menu-toggle,
   .h1--nav-brand {
-    position: initial;
+    position: static;
     cursor: pointer; }
   .nav__menu-toggle {
     float: right;
