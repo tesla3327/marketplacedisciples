@@ -309,6 +309,8 @@ p {
   .nav__menu-toggle {
     float: right;
     line-height: 50px; }
+  .nav__link-list {
+    justify-content: center; }
   .nav__menu-toggle--overlay {
     position: absolute;
     left: 1em;
