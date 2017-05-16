@@ -215,15 +215,16 @@ p {
 .section--signup,
 .section--signup .clear {
   display: flex;
-  font-family: "Lora", sans-serif;
-  font-size: 21.6px;
+  font-family: 'Rambla';
+  font-size: 25.2px;
   font-weight: bold;
   flex-direction: column;
   align-items: center;
   text-align: center; }
 
 .section--signup {
-  margin-bottom: 64.8px; }
+  margin-bottom: 64.8px;
+  }
 
 .section--signup #mc_embed_signup {
   width: 100%; }
