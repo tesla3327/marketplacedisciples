@@ -246,9 +246,8 @@ p {
 .card {
   margin: 0 -0.5em 32.4px -0.5em;
   padding: 1em 1em 1.3em 1em;
-  border-radius: 4px;
-  background-image: linear-gradient(to bottom, rgba(34, 73, 98, 0.6), #0f3248);
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2); }
+  border-radius: 2px;
+  background: rgba(34, 73, 98, 0.5); }
 
 .card__title {
   margin-top: 0.5em;
