@@ -146,9 +146,10 @@ input[type=submit] {
 }
 
 .h4 {
-  font-size: $base-font * 1.2;
+  font-size: $base-font * 1.4;
   font-weight: bold;
-  line-height: $rhythm * 1.2;
+  line-height: $rhythm * 1;
+  padding: $rhythm 0 $rhythm / 2 0;
 }
 
 .h5 {
@@ -341,6 +342,7 @@ p {
 
 .card__title {
   margin-top: 0.5em;
+  padding: 0;
   line-height: $base-font;
 }
 

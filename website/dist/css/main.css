@@ -96,9 +96,10 @@ input[type=submit] {
   line-height: 55.08px; }
 
 .h4 {
-  font-size: 21.6px;
+  font-size: 25.2px;
   font-weight: bold;
-  line-height: 38.88px; }
+  line-height: 32.4px;
+  padding: 32.4px 0 16.2px 0; }
 
 .h5 {
   font-size: 18px;
@@ -223,8 +224,7 @@ p {
   text-align: center; }
 
 .section--signup {
-  margin-bottom: 64.8px;
-  }
+  margin-bottom: 64.8px; }
 
 .section--signup #mc_embed_signup {
   width: 100%; }
@@ -252,6 +252,7 @@ p {
 
 .card__title {
   margin-top: 0.5em;
+  padding: 0;
   line-height: 18px; }
 
 .card__summary {
