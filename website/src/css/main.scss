@@ -186,6 +186,12 @@ p {
   z-index: 10;
 }
 
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
 .nav__link-list {
   flex-grow: 1;
   display: flex;
@@ -221,6 +227,22 @@ p {
   z-index: 99;
   font-family: 'Rambla', sans-serif;
   font-weight: 700;
+}
+
+.nav__header {
+  display: none;
+}
+
+.nav__header-item {
+  color: $body-text;
+  text-decoration: none;
+  font-size: $base-font * 1;
+  font-family: 'Rambla', sans-serif;
+  font-weight: bold;
+  margin-left: $rhythm;
+
+  &:hover {
+  }
 }
 
 // Don't display the menu checkbox
@@ -422,6 +444,18 @@ p {
     z-index: 99;
   }
 
+  .nav__header {
+    display: flex;
+  }
+
+  .nav__header-item {
+    transition: color 0.1s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
   .nav__menu-toggle,
   .h1--nav-brand {
     position: static;
@@ -429,8 +463,9 @@ p {
   }
 
   .nav__menu-toggle {
-    float: right;
-    line-height: 50px;
+    // float: right;
+    // line-height: 50px;
+    display: none;
   }
 
   .nav__link-list {
