@@ -304,6 +304,7 @@ p {
 	padding-top: $rhythm * 0.5;
 	text-align: center;
 	font-size: $base-font * 1.3;
+  font-family: 'Rambla', sans-serif;
 }
 
 .section--interviews__interviews {
@@ -331,23 +332,38 @@ p {
 }
 
 .article__quote {
-	font-style: italic;
-  padding: 0;
+  padding: 0 $rhythm * 4 $rhythm / 2 $rhythm * 4;
+  font-style: italic;
+  text-align: center;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.article__conclusion {
+  padding-top: $rhythm;
 }
 
 .article__divider {
-  margin: 2em auto 4em auto;
+  margin: $rhythm auto $rhythm auto;
   background: $body-text;    
-  height: 30px;
+  height: 20px;
   background: $body-text;
   background-image: linear-gradient(
-    15deg,
+    10deg,
     rgba($primary-lighter, 0.8),
     $body-text
   );
-  transform: rotate(-15deg) skewX(-15deg);
-  width: 120px;
+  transform: rotate(-10deg) skewX(-10deg);
+  width: 150px;
   z-index: 1;
+
+  &--small {
+    height: 8px;
+    width: 80px;
+  }
 }
 
 .card {
@@ -367,6 +383,7 @@ p {
   margin-top: 0.5em;
   padding: 0;
   line-height: $base-font;
+  color: $accent;
 }
 
 .card__summary {

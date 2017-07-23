@@ -223,7 +223,8 @@ p {
 .section--hero__tagline {
   padding-top: 16.2px;
   text-align: center;
-  font-size: 23.4px; }
+  font-size: 23.4px;
+  font-family: 'Rambla', sans-serif; }
 
 .section--interviews__interviews {
   display: flex;
@@ -246,18 +247,28 @@ p {
   width: 100%; }
 
 .article__quote {
+  padding: 0 129.6px 16.2px 129.6px;
   font-style: italic;
-  padding: 0; }
+  text-align: center; }
+  .article__quote p {
+    margin: 0;
+    padding: 0; }
+
+.article__conclusion {
+  padding-top: 32.4px; }
 
 .article__divider {
-  margin: 2em auto 4em auto;
+  margin: 32.4px auto 32.4px auto;
   background: #e7ebed;
-  height: 30px;
+  height: 20px;
   background: #e7ebed;
-  background-image: linear-gradient(15deg, rgba(60, 98, 122, 0.8), #e7ebed);
-  transform: rotate(-15deg) skewX(-15deg);
-  width: 120px;
+  background-image: linear-gradient(10deg, rgba(60, 98, 122, 0.8), #e7ebed);
+  transform: rotate(-10deg) skewX(-10deg);
+  width: 150px;
   z-index: 1; }
+  .article__divider--small {
+    height: 8px;
+    width: 80px; }
 
 .card {
   margin: 0 -0.5em 32.4px -0.5em;
@@ -268,7 +279,8 @@ p {
 .card__title {
   margin-top: 0.5em;
   padding: 0;
-  line-height: 18px; }
+  line-height: 18px;
+  color: #d9bb26; }
 
 .card__summary {
   padding-bottom: 0; }
