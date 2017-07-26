@@ -66,7 +66,7 @@ input[type=email] {
   &::-ms-placeholder,
   &::-webkit-placeholder,
   &::placeholder {
-    color: rgba($body-text, 0.6);
+    color: rgba($body-text, 0.6) !important;
   }
 }
 
@@ -152,6 +152,7 @@ input[type=submit] {
   font-weight: bold;
   line-height: $rhythm * 1;
   padding: $rhythm 0 $rhythm / 2 0;
+  color: $accent;
 }
 
 .h5 {
@@ -176,6 +177,10 @@ p {
 /**
  * Components
  */
+.content {
+  width: 100%;
+}
+
 .nav {
   position: fixed;
   width: 100%;
@@ -222,6 +227,10 @@ p {
   height: 100%;
 }
 
+.nav__list-item--accent {
+  text-decoration: underline;
+}
+
 .nav__menu-toggle {
   position: fixed;
   top: 11px;
@@ -245,6 +254,10 @@ p {
 
   &:hover {
   }
+}
+
+.nav__header-item--accent {
+  color: $accent;
 }
 
 // Don't display the menu checkbox
@@ -342,7 +355,7 @@ p {
 }
 
 .article__quote {
-  padding: 0 $rhythm * 4 $rhythm / 2 $rhythm * 4;
+  padding: 0 $rhythm/2 $rhythm / 2 $rhythm/2;
   font-style: italic;
   text-align: center;
 
@@ -407,8 +420,6 @@ p {
 
 .card__title {
   padding: 0;
-  // line-height: $base-font;
-  color: $accent;
 }
 
 .card__summary {
@@ -436,6 +447,10 @@ p {
 }
 
 @media (min-width: 750px) {
+  .content {
+    width: inherit;
+  }
+
   input[type=submit] {
     background: $accent;
     transition: background 0.2s ease-in-out;
@@ -472,6 +487,10 @@ p {
 
   .section--signup {
     padding-top: $rhythm;
+  }
+
+  .article__quote {
+    padding: 0 $rhythm * 4 $rhythm / 2 $rhythm * 4;
   }
 
   .h2--date {

@@ -35,7 +35,7 @@ input[type=email] {
   background: rgba(0, 0, 0, 0.3);
   color: #e7ebed; }
   input[type=email]::-moz-placeholder, input[type=email]::-ms-placeholder, input[type=email]::-webkit-placeholder, input[type=email]::placeholder {
-    color: rgba(231, 235, 237, 0.6); }
+    color: rgba(231, 235, 237, 0.6) !important; }
 
 input[type=submit] {
   background: #d9bb26;
@@ -99,7 +99,8 @@ input[type=submit] {
   font-size: 25.2px;
   font-weight: bold;
   line-height: 32.4px;
-  padding: 32.4px 0 16.2px 0; }
+  padding: 32.4px 0 16.2px 0;
+  color: #d9bb26; }
 
 .h5 {
   font-size: 18px;
@@ -120,6 +121,9 @@ p {
 /**
  * Components
  */
+.content {
+  width: 100%; }
+
 .nav {
   position: fixed;
   width: 100%;
@@ -158,6 +162,9 @@ p {
   width: 100%;
   height: 100%; }
 
+.nav__list-item--accent {
+  text-decoration: underline; }
+
 .nav__menu-toggle {
   position: fixed;
   top: 11px;
@@ -176,6 +183,9 @@ p {
   font-family: 'Rambla', sans-serif;
   font-weight: bold;
   margin-left: 32.4px; }
+
+.nav__header-item--accent {
+  color: #d9bb26; }
 
 #menu-toggle {
   display: none; }
@@ -252,7 +262,7 @@ p {
   width: 100%; }
 
 .article__quote {
-  padding: 0 129.6px 16.2px 129.6px;
+  padding: 0 16.2px 16.2px 16.2px;
   font-style: italic;
   text-align: center; }
   .article__quote p {
@@ -294,8 +304,7 @@ p {
   text-align: right; }
 
 .card__title {
-  padding: 0;
-  color: #d9bb26; }
+  padding: 0; }
 
 .card__summary {
   padding-bottom: 0;
@@ -317,6 +326,8 @@ p {
     margin: 64.8px 0; } }
 
 @media (min-width: 750px) {
+  .content {
+    width: inherit; }
   input[type=submit] {
     background: #d9bb26;
     transition: background 0.2s ease-in-out;
@@ -336,6 +347,8 @@ p {
     line-height: 3.5vw; }
   .section--signup {
     padding-top: 32.4px; }
+  .article__quote {
+    padding: 0 129.6px 16.2px 129.6px; }
   .h2--date {
     margin-top: 16.2px;
     font-size: 4vw; }
