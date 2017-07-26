@@ -14,6 +14,8 @@ $accent-dark: darken(saturate($accent, 10%), 15%);
 $accent-darkest: darken(saturate($accent, 10%), 25%);
 $accent-light: lighten(desaturate($accent, 5%), 15%);
 
+$accent-secondary: #DDA0DD;
+
 $body-text: #e7ebed;
 $body-text-dark: saturate(darken($body-text, 45%), 10%);
 
@@ -307,6 +309,14 @@ p {
   font-family: 'Rambla', sans-serif;
 }
 
+.section--benefits .card {
+  background: none;
+
+  &:nth-child(even) {
+    text-align: right;
+  }
+}
+
 .section--interviews__interviews {
 	display: flex;
 	flex-direction: column;
@@ -379,20 +389,35 @@ p {
   // box-shadow: 0 7px 20px rgba(0,0,0,0.2);
 }
 
+.card--no-bg {
+  background: none;
+}
+
+.card--centered {
+  text-align: center;
+}
+
+.card--left {
+  text-align: left;
+}
+
+.card--right {
+  text-align: right;
+}
+
 .card__title {
-  margin-top: 0.5em;
   padding: 0;
-  line-height: $base-font;
+  // line-height: $base-font;
   color: $accent;
 }
 
 .card__summary {
 	padding-bottom: 0;
+  margin-top: $rhythm / 2;
 }
 
 .card__date {
   color: rgba($body-text, 0.7);
-  margin-bottom: $rhythm / 2;
 }
 
 .card__link {
@@ -438,6 +463,15 @@ p {
 
   .section--title {
     margin: 10vw 0;
+  }
+
+  .section--hero__tagline {
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+  }
+
+  .section--signup {
+    padding-top: $rhythm;
   }
 
   .h2--date {
@@ -559,6 +593,11 @@ p {
 
   .section--title {
     margin: 100px 0;
+  }
+
+  .section--hero__tagline {
+    font-size: 35px;
+    line-height: 35px;
   }
 
   .h2--date {

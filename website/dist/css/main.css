@@ -226,6 +226,11 @@ p {
   font-size: 23.4px;
   font-family: 'Rambla', sans-serif; }
 
+.section--benefits .card {
+  background: none; }
+  .section--benefits .card:nth-child(even) {
+    text-align: right; }
+
 .section--interviews__interviews {
   display: flex;
   flex-direction: column; }
@@ -276,18 +281,28 @@ p {
   border-radius: 2px;
   background: rgba(34, 73, 98, 0.5); }
 
+.card--no-bg {
+  background: none; }
+
+.card--centered {
+  text-align: center; }
+
+.card--left {
+  text-align: left; }
+
+.card--right {
+  text-align: right; }
+
 .card__title {
-  margin-top: 0.5em;
   padding: 0;
-  line-height: 18px;
   color: #d9bb26; }
 
 .card__summary {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  margin-top: 16.2px; }
 
 .card__date {
-  color: rgba(231, 235, 237, 0.7);
-  margin-bottom: 16.2px; }
+  color: rgba(231, 235, 237, 0.7); }
 
 .card__link {
   display: inline-block;
@@ -316,6 +331,11 @@ p {
     text-shadow: 1px 1px 0px #5a8194, 2px 2px 0px #5a8194, 3px 3px 0px #5a8194, 4px 4px 0px #5a8194, 0 10px 30px rgba(0, 0, 0, 0.2); }
   .section--title {
     margin: 10vw 0; }
+  .section--hero__tagline {
+    font-size: 3.5vw;
+    line-height: 3.5vw; }
+  .section--signup {
+    padding-top: 32.4px; }
   .h2--date {
     margin-top: 16.2px;
     font-size: 4vw; }
@@ -393,6 +413,9 @@ p {
     line-height: 110px; }
   .section--title {
     margin: 100px 0; }
+  .section--hero__tagline {
+    font-size: 35px;
+    line-height: 35px; }
   .h2--date {
     font-size: 40px; } }
 
