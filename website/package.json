@@ -4,9 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  	"build:watch": "node-sass --watch --recursive --output dist/css --source-map true --source-map-contents src/css",
+    "build": "npm run clean && npm run build:css && npm run build:html && npm run build:img",
+    "build:img": "cp -a src/img/ dist/img/",
+    "build:html": "./scripts/build.js",
+    "build:css:watch": "watch 'npm run build:css' src/css/",
+    "build:css": "node-sass --recursive --output dist/css --source-map true --source-map-contents src/css",
+    "build:watch": "watch 'npm run build' src/",
+    "clean": "rm -r dist/ || true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "watch": "^1.0.2"
+  }
 }
