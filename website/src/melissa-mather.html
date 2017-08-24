@@ -1,19 +1,6 @@
-<!doctype html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="Interviews with Christians leaders in business">
-    <title>Marketplace Disciples | Interviews with Christian leaders in business</title>
+{% extends "components/main_template.html" %}
 
-    <link rel="stylesheet" href="{{ cssPath }}">
-
-  </head>
-  <body>
-    {% include "components/navigation.html" %}
-
+{% block content %}
     <div class="content">
       <div class="section section--title">
         <h1 class="h1 h1--title">Melissa Mather</h1>
@@ -172,18 +159,4 @@
         </div>
       </div>
     </div>
-
-    {% include "components/footer.html" %}
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-96388123-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-  </body>
-</html>
+{% endblock %}
