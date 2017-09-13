@@ -100,7 +100,7 @@ input[type=submit] {
 }
 
 .h1 {
-	font-size: $base-font * 2.8;
+	font-size: $base-font * 2.4;
 	line-height: $rhythm * 1.7;
 }
 
@@ -134,11 +134,11 @@ input[type=submit] {
 	line-height: $rhythm * 1.7;
 }
 
-.h2--title, .h2--date {
+.h2--title, .h2--sub-title {
 	text-align: center;
 }
 
-.h2--date {
+.h2--sub-title {
   color: rgba($body-text, 0.7);
   font-weight: 400;
   font-size: $base-font * 1.2;
@@ -523,7 +523,7 @@ footer {
   margin-top: $rhythm / 2;
 }
 
-.card__date {
+.card__sub-title {
   color: rgba($body-text, 0.7);
 }
 
@@ -577,8 +577,8 @@ footer {
   }
 
   .h1--title {
-    font-size: 10vw;
-    line-height: 11vw;
+    font-size: 8vw;
+    line-height: 9vw;
     text-shadow:
       1px 1px 0px $body-text-dark,
       2px 2px 0px $body-text-dark,
@@ -613,7 +613,7 @@ footer {
     padding: 0 $rhythm * 4 $rhythm / 2 $rhythm * 4;
   }
 
-  .h2--date {
+  .h2--sub-title {
     margin-top: $rhythm / 2;
     font-size: 4vw;
   }
@@ -726,12 +726,12 @@ footer {
 
 @media (min-width: 1000px) {
 	.h1--title {
-    font-size: 100px;
-    line-height: 110px;
+    font-size: 80px;
+    line-height: 90px;
 	}
 
   .section--title {
-    margin: 100px 0;
+    margin: 80px 0;
   }
 
   .section--hero__tagline {
@@ -739,7 +739,7 @@ footer {
     line-height: 35px;
   }
 
-  .h2--date {
+  .h2--sub-title {
     font-size: 40px;
   }
 }

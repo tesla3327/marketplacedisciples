@@ -3,8 +3,8 @@
 {% block content %}
     <div class="content">
       <div class="section section--title">
-        <h1 class="h1 h1--title">Gayle Goossen</h1>
-        <h2 class="h2 h2--date">May 17, 2017</h2>
+        <h1 class="h1 h1--title">When People Are More Important than Profit</h1>
+        <h2 class="h2 h2--sub-title">with Gayle Goossen</h2>
       </div>
 
       <article class="section section--article">
@@ -124,18 +124,6 @@
       <div class="section section--interviews">
         <h3 class="h3 section__title">Other Interviews</h3>
 
-        <div class="card">
-          <h4 class="h4 card__title">Melissa Mather</h4>
-          <h5 class="h5 card__date">April 21, 2017</h5>
-          <p class="card__summary">Melissa Mather is a business coach who lives in southern Ontario. A few years ago she started a tutoring business, and as that took off she realized she had a talent for business, and a passion for empowering women entrepreneurs.</p>
-          <a href="melissa-mather.html" class="link card__link">Read Melissa's Interview</a>
-        </div>
-
-        <div class="section--interviews__interviews">
-          <div class="card">
-            <p class="card__summary">More interviews coming soon...</p>
-          </div>
-        </div>
-      </div>
+        {% include "components/interview_list.html" %}
     </div>
 {% endblock %}
