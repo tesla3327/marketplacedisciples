@@ -1,0 +1,7 @@
+{% import "components/interview_list.html" as interview_list %}
+
+      <!-- Interview List -->
+      <div class="section section--interviews">
+        <h3 class="h3 section__title">Interviews</h3>
+        {{ interview_list.interview_list(global.interviewsById, global, pathToRoot) }}
+      </div>

@@ -13,7 +13,6 @@ const INTERVIEW_TEMPLATE = 'components/interview_template.html';
 
 const globalContext = {
   cssPath: 'css/main.css',
-  pathToRoot: './',
 };
 
 // Render just the index for now
@@ -29,7 +28,10 @@ const getFilesOfType = (directory, extension) => {
  */
 const renderPage = filename => {
   // Hard code CSS path for now
-  const data = nunjucks.render(filename, globalContext);
+  const data = nunjucks.render(filename, {
+    global: globalContext,
+    pathToRoot: './',
+  });
   fs.writeFileSync(path.resolve(PROCESS + OUTPUT + filename), data);
 };
 
@@ -44,10 +46,10 @@ const renderInterview = (interview) => {
     INTERVIEW_TEMPLATE,
     Object.assign(
       {},
-      globalContext,
       {
         pathToRoot: '../',
-        interview, 
+        interview,
+        global: globalContext,
       }
     )
   );
@@ -65,7 +67,7 @@ const buildInterviews = () => {
     const interviewData = JSON.parse(fs.readFileSync(path.resolve(PROCESS + INTERVIEWS + filename), 'utf8'));
     const interviewContent = fs.readFileSync(path.resolve(PROCESS + INTERVIEWS + filename.replace('.json', '.html')));
 
-    interviewData.id = filename;
+    interviewData.id = filename.split('.')[0];
     interviewData.content = interviewContent;
     interviewData.firstname = interviewData.name.split(' ')[0];
 
@@ -73,7 +75,12 @@ const buildInterviews = () => {
   });
 
   // Add interviews to global context
-  globalContext.interviews = interviewList;
+  globalContext.interviews = {};
+  globalContext.interviewsById = [];
+  interviewList.forEach(elem => {
+    globalContext.interviews[elem.id] = elem;
+    globalContext.interviewsById.push(elem.id);
+  });
 
   // Create the directory for output if we need to
   const interviewOutputDir = path.resolve(PROCESS + OUTPUT + '/interviews');

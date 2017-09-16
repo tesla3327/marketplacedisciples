@@ -1,4 +1,4 @@
-{% macro interview_card(title, firstname, fullname, url, summary) %}
+{% macro interview_card(title, firstname, fullname, url, summary, pathToRoot) %}
 <div class="card">
   <h4 class="h4 card__title">{{ title | safe }}</h4>
   <h5 class="h5 card__sub-title">with {{ fullname }}</h5>
@@ -7,12 +7,15 @@
 </div>
 {% endmacro %}
 
+{% macro interview_list(interviewList, global, pathToRoot) %}
 <div class="section--interviews__interviews">
-  {% for i in interviews %}
-    {{ interview_card(i.title, i.firstname, i.name, i.url, i.summary) }}
+  {% for id in interviewList %}
+    {% set i = global.interviews[id] %}
+    {{ interview_card(i.title, i.firstname, i.name, i.url, i.summary, pathToRoot) }}
   {% endfor %}
 
   <div class="card">
     <p class="card__summary">More interviews coming soon...</p>
   </div>
 </div>
+{% endmacro %}
