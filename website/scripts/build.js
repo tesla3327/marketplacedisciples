@@ -65,10 +65,8 @@ const buildInterviews = () => {
   // Grab each interview, using the filename as the id
   interviewPaths.forEach(filename => {
     const interviewData = JSON.parse(fs.readFileSync(path.resolve(PROCESS + INTERVIEWS + filename), 'utf8'));
-    const interviewContent = fs.readFileSync(path.resolve(PROCESS + INTERVIEWS + filename.replace('.json', '.html')));
 
     interviewData.id = filename.split('.')[0];
-    interviewData.content = interviewContent;
     interviewData.firstname = interviewData.name.split(' ')[0];
 
     interviewList.push(interviewData);

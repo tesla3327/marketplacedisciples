@@ -8,7 +8,7 @@
         <h2 class="h2 h2--sub-title">with {{ interview.name | safe }}</h2>
       </div>
 
-      {{ interview.content | safe }}
+      {% include "../interviews/" + interview.id + ".html" %}
 
       <div class="section section--interviews">
         <h3 class="h3 section__title">Other Interviews</h3>
