@@ -13,9 +13,5 @@
     {% set i = global.interviews[id] %}
     {{ interview_card(i.title, i.firstname, i.name, i.url, i.summary, pathToRoot) }}
   {% endfor %}
-
-  <div class="card">
-    <p class="card__summary">More interviews coming soon...</p>
-  </div>
 </div>
 {% endmacro %}
