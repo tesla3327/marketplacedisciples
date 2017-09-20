@@ -11,9 +11,7 @@ const INTERVIEWS = 'src/interviews/';
 const PROCESS = process.cwd() + '/';
 const INTERVIEW_TEMPLATE = 'components/interview_template.html';
 
-const globalContext = {
-  cssPath: 'css/main.css',
-};
+const globalContext = require(__dirname + '/../src/globalContext.json');
 
 // Render just the index for now
 nunjucks.configure(SOURCE, OPTIONS);
@@ -74,10 +72,8 @@ const buildInterviews = () => {
 
   // Add interviews to global context
   globalContext.interviews = {};
-  globalContext.interviewsById = [];
   interviewList.forEach(elem => {
     globalContext.interviews[elem.id] = elem;
-    globalContext.interviewsById.push(elem.id);
   });
 
   // Create the directory for output if we need to
