@@ -1,6 +1,6 @@
 {% macro interview_card(title, firstname, fullname, url, summary, pathToRoot) %}
 <div class="card">
-  <h4 class="h4 card__title">{{ title | safe }}</h4>
+  <h4 class="h4 card__title"><a href="{{ pathToRoot }}{{ url }}">{{ title | safe }}</a></h4>
   <h5 class="h5 card__sub-title">with {{ fullname }}</h5>
   <p class="card__summary">{{ summary | safe }}</p>
   <a href="{{ pathToRoot }}{{ url }}" class="link card__link">Read {{ firstname }}'s Interview</a>

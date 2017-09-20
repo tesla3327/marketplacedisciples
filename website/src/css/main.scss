@@ -150,12 +150,13 @@ input[type=submit] {
 	line-height: $rhythm * 1.7;
 }
 
-.h4 {
+.h4, .h4 a {
   font-size: $base-font * 1.4;
   font-weight: bold;
   line-height: $rhythm * 1;
   padding: $rhythm 0 $rhythm / 2 0;
   color: $accent;
+  text-decoration: none;
 }
 
 .h5 {
@@ -514,7 +515,8 @@ footer {
   text-align: right;
 }
 
-.card__title {
+.card__title,
+.card__title a {
   padding: 0;
 }
 
