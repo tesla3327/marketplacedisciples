@@ -5,7 +5,10 @@
     <div class="content">
       <div class="section section--title">
         <h1 class="h1 h1--title">{{ interview.title | safe }}</h1>
-        <h2 class="h2 h2--sub-title">with {{ interview.name | safe }}</h2>
+        <div class="sub-header">
+          <h2 class="h2 h2--sub-title">{{ interview.published }}</h2>
+          <h2 class="h2 h2--sub-title">with {{ interview.name | safe }}</h2>
+        </div>
       </div>
 
       {% include "../interviews/" + interview.id + ".html" %}

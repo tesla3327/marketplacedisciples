@@ -19,7 +19,7 @@ $accent-light: lighten(desaturate($accent, 5%), 15%);
 
 $accent-secondary: #DDA0DD;
 
-$body-text: #e7ebed;
+$body-text: rgba(#e7ebed, 0.9);
 $body-text-dark: saturate(darken($body-text, 45%), 10%);
 
 @import url('https://fonts.googleapis.com/css?family=Rambla:400,700|Lora:400,400i,700,700i');
@@ -100,8 +100,8 @@ input[type=submit] {
 }
 
 .h1 {
-	font-size: $base-font * 2.4;
-	line-height: $rhythm * 1.7;
+	font-size: $base-font * 2;
+	line-height: $rhythm * 1.4;
 }
 
 .h1--title {
@@ -110,10 +110,6 @@ input[type=submit] {
 	text-align: center;
   // color: $accent;
   color: $body-text;
-  text-shadow:
-    1px 1px 0px $body-text-dark,
-    2px 2px 0px $body-text-dark,
-		0 0 30px rgba(0,0,0,0.3);
 }
 
 .h1--nav-brand {
@@ -130,18 +126,18 @@ input[type=submit] {
 }
 
 .h2 {
-	font-size: $base-font * 2;
+	font-size: $base-font * 1.5;
 	line-height: $rhythm * 1.7;
 }
 
-.h2--title, .h2--sub-title {
+.h2--title {
 	text-align: center;
 }
 
 .h2--sub-title {
   color: rgba($body-text, 0.7);
   font-weight: 400;
-  font-size: $base-font * 1.2;
+  font-size: $base-font * 1;
 }
 
 .h3 {
@@ -154,8 +150,8 @@ input[type=submit] {
   font-size: $base-font * 1.4;
   font-weight: bold;
   line-height: $rhythm * 1;
-  padding: $rhythm 0 $rhythm / 2 0;
-  color: $accent;
+  color: $body-text;
+  padding: $rhythm * 2 0 $rhythm / 2 0;
   text-decoration: none;
 }
 
@@ -525,7 +521,9 @@ footer {
   margin-top: $rhythm / 2;
 }
 
-.card__sub-title {
+.sub-header {
+  display: flex;
+  flex-direction: column;
   color: rgba($body-text, 0.7);
 }
 
@@ -538,6 +536,13 @@ footer {
 /**
  * Responsive!
  */
+@media (min-width: 375px) {
+  .sub-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 @media (min-width: 750px) {
   .content {
     width: inherit;
@@ -579,14 +584,14 @@ footer {
   }
 
   .h1--title {
-    font-size: 8vw;
-    line-height: 9vw;
-    text-shadow:
-      1px 1px 0px $body-text-dark,
-      2px 2px 0px $body-text-dark,
-      3px 3px 0px $body-text-dark,
-      4px 4px 0px $body-text-dark,
-      0 0 30px rgba(0,0,0,0.3);
+    font-size: 6vw;
+    line-height: 7vw;
+    // text-shadow:
+    //   1px 1px 0px $body-text-dark,
+    //   2px 2px 0px $body-text-dark,
+    //   3px 3px 0px $body-text-dark,
+    //   4px 4px 0px $body-text-dark,
+    //   0 0 30px rgba(0,0,0,0.3);
   }
 
   .section--title {
@@ -616,8 +621,8 @@ footer {
   }
 
   .h2--sub-title {
-    margin-top: $rhythm / 2;
-    font-size: 4vw;
+    margin-top: $rhythm;
+    font-size: 2.5vw;
   }
 
   .nav {
@@ -728,8 +733,8 @@ footer {
 
 @media (min-width: 1000px) {
 	.h1--title {
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 60px;
+    line-height: 70px;
 	}
 
   .section--title {
@@ -742,6 +747,6 @@ footer {
   }
 
   .h2--sub-title {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
