@@ -518,7 +518,7 @@ footer {
 
 .card__summary {
 	padding-bottom: 0;
-  margin-top: $rhythm / 2;
+  margin-top: $rhythm;
 }
 
 .sub-header {
@@ -530,7 +530,7 @@ footer {
 .card__link {
   display: inline-block;
   line-height: calc(#{$base-font} + 8px);
-  margin-top: $rhythm / 2;
+  margin-top: $rhythm;
 }
 
 /**
