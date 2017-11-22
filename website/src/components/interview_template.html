@@ -11,7 +11,13 @@
         </div>
       </div>
 
-      {% include "../interviews/" + interview.id + ".html" %}
+      <article class="section section--article">
+        {% include "../interviews/" + interview.id + ".html" %}
+
+        {% include "components/share_cta.html" %}
+
+        {% include "components/signup_form.html" %}
+      </article>
 
       <div class="section section--interviews">
         <h3 class="h3 section__title">Other Interviews</h3>
