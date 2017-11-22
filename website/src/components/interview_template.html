@@ -1,6 +1,11 @@
 {% extends "components/main_template.html" %}
 {% import "components/interview_list.html" as interview_list %}
 
+{% block meta %}
+    <meta name="description" content="{{ interview.summary | striptags }}">
+    <title>{{ interview.title }} - Marketplace Disciples</title>
+{% endblock %}
+
 {% block content %}
     <div class="content">
       <div class="section section--title">
