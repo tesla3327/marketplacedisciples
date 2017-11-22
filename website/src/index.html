@@ -1,4 +1,5 @@
 {% extends "components/main_template.html" %}
+{% import "components/interview_list.html" as interview_list %}
 
 {% block content %}
     <!-- Hero -->
@@ -13,35 +14,19 @@
 
     <div class="content">
       <div id="benefits" class="section section--benefits">
-        <div class="card">
-          <h4 class="h4 card__title">Learn from the experiences of other Christian business owners</h4>
-          <p class="card__summary">At Marketplace Disciples I interview leaders in business about the unique challenges that Christian business owners face everyday.</p>
-          <p class="card__summary"><a href="./interviews.html" class="link">Read the latest interviews</a></p>
-        </div>
-
-        <div class="card">
-          <h4 class="h4 card__title">We discuss the important issues</h4>
-          <p class="card__summary"><em>"How can I use my business as a ministry?"</em></p>
-          <p class="card__summary"><em>"What is a biblical way of making decisions in my business?"</em></p>
-          <p class="card__summary"><em>"Is it possible to sell and market in a God honouring way?"</em></p>
-          <p class="card__summary">These are just some of the topics that I cover in these interviews.</p>
-        </div>
-
-        <div class="card">
-          <h4 class="h4 card__title">Put profits second &mdash; grow in faith</h4>
-          <p class="card__summary">If all that you want is to make more money, this isn't the place for you.</p>
-          <p class="card__summary">Here at Marketplace Disciples we are focused on how faith shapes the way that business is done.</p>
-        </div>
-
-        <div class="card">
-          <h4 class="h4 card__title">Who is a Marketplace Disciple?</h4>
-          <p class="card__summary">Any Christian business owner that wants to learn more about how faith and business work together for God's kingdom.</p>
-        </div>
+        <h4 class="h4 card__title">Who is a Marketplace Disciple?</h4>
+        <p class="card__summary">Any Christian that wants to learn more about how faith and business work together for God's kingdom.</p>
+      </div>
+      
+      <div class="section section--interviews">
+        <h3 class="h3 section__title">Recent Interviews</h3>
+        <p>
+          A new interview is published every 2 weeks!
+        </p>
+        {{ interview_list.interview_list(global.latest, global, pathToRoot) }}
       </div>
 
       {% include "components/signup_form.html" %}
-
-      {% include "components/all_interviews.html" %}
 
     </div>
 {% endblock %}
