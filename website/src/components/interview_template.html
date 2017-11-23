@@ -4,6 +4,11 @@
 {% block meta %}
     <meta name="description" content="{{ interview.summary | striptags }}">
     <title>{{ interview.title }} - Marketplace Disciples</title>
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ interview.title }}" />
+    <meta property="og:description" content="{{ interview.summary | striptags }}" />
 {% endblock %}
 
 {% block content %}
