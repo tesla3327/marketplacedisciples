@@ -76,7 +76,7 @@ const buildInterviews = () => {
     globalContext.interviews[elem.id] = elem;
   });
 
-  globalContext.latest = globalContext.interviewOrder.slice(0,2);
+  globalContext.latest = globalContext.interviewOrder.slice(0,3);
 
   // Create the directory for output if we need to
   const interviewOutputDir = path.resolve(PROCESS + OUTPUT + '/interviews');
