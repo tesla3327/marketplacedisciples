@@ -1,0 +1,13 @@
+{% macro resource_card(title, author, url, summary, recommendedBy, pathToRoot) %}
+<div class="card">
+  <h4 class="h4 card__title"><a href="{{ url }}">{{ title | safe }}</a></h4>
+
+  {% if author !== '' %}
+    <em>{{ author | safe }}</em>
+    <br />
+  {% endif %}
+
+  <p class="card__summary">{{ summary | safe }}</p>
+  <a href="{{ url }}" class="link card__link">Check it out</a>
+</div>
+{% endmacro %}
