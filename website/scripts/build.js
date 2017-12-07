@@ -12,6 +12,7 @@ const PROCESS = process.cwd() + '/';
 const INTERVIEW_TEMPLATE = 'components/interview_template.html';
 
 const globalContext = require(__dirname + '/../src/globalContext.json');
+globalContext.resources = require(__dirname + '/../src/resources.json');
 
 // Render just the index for now
 nunjucks.configure(SOURCE, OPTIONS);
@@ -90,7 +91,7 @@ const buildInterviews = () => {
 
 const buildWebsite = () => {
 	buildInterviews();
-	buildPages();
+  buildPages();
 };
 
 buildWebsite();

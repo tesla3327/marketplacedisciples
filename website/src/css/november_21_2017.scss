@@ -152,10 +152,10 @@ input[type=submit] {
   line-height: $rhythm * 1;
   color: $body-text;
   text-decoration: none;
-}
 
-.interview .h4 {
-  padding: $rhythm * 2 0 $rhythm / 2 0;
+  &:not(:first-child) {
+    padding: $rhythm * 2 0 $rhythm / 2 0;
+  }
 }
 
 .h5 {
@@ -179,6 +179,10 @@ p {
 	&--accent {
 		color: $accent;
 	}
+}
+
+.underline {
+  border-bottom: solid $accent;
 }
 
 /**

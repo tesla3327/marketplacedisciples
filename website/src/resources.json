@@ -1,0 +1,14 @@
+{
+  "podcasts": [
+    {
+      "title": "Gospel Driven",
+      "summary": "With over 200 episodes, P.J. Simmons interviews Christian entrepreneurs and business owners about how to, &#34;merge business and faith without sacrificing growth and success, or the Gospel.&#34;",
+      "url": "http://www.gospeldriven.is/"
+    },
+    {
+      "title": "Theology of Business",
+      "url": "http://www.theologyofbusiness.com/",
+      "summary": "Darren Shearer went from seminary to running a full-time business, and now he interviews all sorts of people – including professors, theologians, and business persons – about how to integrate theology with business."
+    }
+  ]
+}
