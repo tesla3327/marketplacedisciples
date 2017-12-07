@@ -1,0 +1,102 @@
+{% extends "components/main_template.html" %}
+{% import "components/interview_list.html" as interview_list %}
+
+{% block content %}
+    <!-- Hero -->
+    <div class="hero--image hero--image--share-your-story">
+      <div class="content">
+        <div class="section section--title">
+          <h1 class="h1 h1--title">Resources</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <article class="section section--article">
+        <p>
+          I have spent countless hours searching online for the best sites related to Christianity and business.
+        </p>
+        <p>
+          So instead of wading through hundreds of links and websites like I have, I thought I would just give you a list of the best ones I have found so far!
+        </p>
+        <p>
+          <em>Remember, this list will be updated periodically!</em>
+          <ul>
+            <li><a href="#podcasts" class="link">Podcasts</a></li>
+            <li><a href="#blogs" class="link">Websites and Blogs</a></li>
+            <li><a href="#books" class="link">Books</a></li>
+          </ul>
+        </p>
+        <h3 class="h3" id="podcasts">Podcasts</h3>
+        <div class="card">
+          <h4 class="h4 card__title"><a href="http://www.gospeldriven.is/">Gospel Driven</a></h4>
+          <p class="card__summary">
+            With over 200 episodes, P.J. Simmons interviews Christian entrepreneurs and business owners about how to, “merge business and faith without sacrificing growth and success, or the Gospel.”
+          </p>
+          <a href="http://www.gospeldriven.is/" class="link card__link">Check them out</a>
+        </div>
+
+        <div class="card">
+          <h4 class="h4 card__title"><a href="http://www.theologyofbusiness.com/">Theology of Business</a></h4>
+          <p class="card__summary">
+            Darren Shearer went from seminary to running a full-time business, and now he interviews all sorts of people – including professors, theologians, and business persons – about how to integrate theology with business.
+          </p>
+          <a href="http://www.theologyofbusiness.com/" class="link card__link">Check them out</a>
+        </div>
+
+        <div class="card">
+          <h4 class="h4 card__title"><a href="http://faithandenterprise.org/">Center for Faith and Enterprise</a></h4>
+          <p class="card__summary">
+           Launched nearly 9 years ago by Rob Tribken and a group of other entrepreneurs, their main mission is helping those in business to allow their faith to become a “source of strength and purpose” in their lives.
+          </p>
+          <a href="http://faithandenterprise.org/" class="link card__link">Check them out</a>
+        </div>
+
+        <h3 class="h3" id="blogs">Websites and Blogs</h3>
+        <div class="card">
+          <h4 class="h4 card__title"><a href="https://tifwe.org/">Institute for Faith, Work & Economics</a></h4>
+          <p class="card__summary">
+            “Our mission is to educate and inspire Christians to live out a Biblical theology that integrates faith, work, and economics.”
+          </p>
+          <p class="card__summary">
+            They have a very interesting blog, as well as many articles on economics from a Biblical and theological perspective.
+          </p>
+          <a href="https://tifwe.org/" class="link card__link">Check them out</a>
+        </div>
+
+        <div class="card">
+          <h4 class="h4 card__title"><a href="http://businessasmission.com/">Business as Mission</a></h4>
+          <p class="card__summary">
+            Business as Mission is built on the fundamental belief that God works through businesses to change the world and redeem it from it’s fallen state. They exist to help tap the business resources within the Church for missional impact.
+          </p>
+          <a href="http://businessasmission.com/" class="link card__link">Check them out</a>
+        </div>
+
+        <h3 class="h3" id="books">Books</h3>
+        <p>
+          All of these books were recommended by interviewees.
+        </p>
+        <p><em>Descriptions taken from Amazon</em></p>
+
+        <div class="card">
+          <h4 class="h4 card__title"><a href="https://www.amazon.ca/God-Owns-Business-Stanley-Tam/dp/1600661874">God Owns My Business</a></h4>
+          <p><em>by Stanley Tam</em></p>
+          <p class="card__summary">
+            God Owns My Business is more than a book about a successful businessman. It is the chronicle of how an average man can, with God's guidance and a willing heart, succeed in any endeavor [...]
+          </p>
+          <a href="https://www.amazon.ca/God-Owns-Business-Stanley-Tam/dp/1600661874" class="link card__link">Check it out</a>
+        </div>
+
+      </article>
+
+      {% include "components/signup_form.html" %}
+
+      <div class="section section--interviews">
+        <h3 class="h3 section__title">Recent Interviews</h3>
+        <p>
+          A new interview is published every 2 weeks!
+        </p>
+        {{ interview_list.interview_list(global.latest, global, pathToRoot) }}
+      </div>
+    </div>
+{% endblock %}
