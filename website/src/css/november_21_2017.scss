@@ -151,8 +151,11 @@ input[type=submit] {
   font-weight: bold;
   line-height: $rhythm * 1;
   color: $body-text;
-  padding: $rhythm * 2 0 $rhythm / 2 0;
   text-decoration: none;
+}
+
+.interview .h4 {
+  padding: $rhythm * 2 0 $rhythm / 2 0;
 }
 
 .h5 {
