@@ -9,6 +9,31 @@
       "title": "Theology of Business",
       "url": "http://www.theologyofbusiness.com/",
       "summary": "Darren Shearer went from seminary to running a full-time business, and now he interviews all sorts of people – including professors, theologians, and business persons – about how to integrate theology with business."
+    },
+    {
+      "title": "Center for Faith and Enterprise",
+      "summary": "Launched nearly 9 years ago by Rob Tribken and a group of other entrepreneurs, their main mission is helping those in business to allow their faith to become a &#34;source of strength and purpose&#34; in their lives.",
+      "url": "http://faithandenterprise.org/"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Institute for Faith, Work & Economics",
+      "summary": "&#34;Our mission is to educate and inspire Christians to live out a Biblical theology that integrates faith, work, and economics.&#34;<br/>They have a very interesting blog, as well as many articles on economics from a Biblical and theological perspective.",
+      "url": "https://tifwe.org/"
+    },
+    {
+      "title": "Business as Mission",
+      "summary": "Business as Mission is built on the fundamental belief that God works through businesses to change the world and redeem it from it’s fallen state. They exist to help tap the business resources within the Church for missional impact.",
+      "url": "http://businessasmission.com/"
+    }
+  ],
+  "books": [
+    {
+      "title": "God Owns My Business",
+      "author": "Stanley Tam",
+      "summary": "God Owns My Business is more than a book about a successful businessman. It is the chronicle of how an average man can, with God's guidance and a willing heart, succeed in any endeavor [...]",
+      "url": "https://www.amazon.ca/God-Owns-Business-Stanley-Tam/dp/1600661874"
     }
   ]
 }

@@ -1,5 +1,6 @@
 {% extends "components/main_template.html" %}
 {% import "components/interview_list.html" as interview_list %}
+{% import "components/resource.html" as resource_card %}
 
 {% block content %}
     <!-- Hero -->
@@ -30,6 +31,20 @@
             <li><a href="#books" class="link">Books</a></li>
           </ul>
         </p>
+
+        {% for category in global.resourceCategories %}
+          {{ category | title }}
+        {% endfor %}
+
+        {% for resource in global.resources.podcasts %}
+          {{ resource_card.resource_card(resource.title, resource.author, resource.url, resource.summary) }}
+        {% endfor %}
+
+
+
+
+
+        <!-- 
         <h3 class="h3" id="podcasts">Podcasts</h3>
         <div class="card">
           <h4 class="h4 card__title"><a href="http://www.gospeldriven.is/">Gospel Driven</a></h4>
@@ -90,7 +105,7 @@
             God Owns My Business is more than a book about a successful businessman. It is the chronicle of how an average man can, with God's guidance and a willing heart, succeed in any endeavor [...]
           </p>
           <a href="https://www.amazon.ca/God-Owns-Business-Stanley-Tam/dp/1600661874" class="link card__link">Check it out</a>
-        </div>
+        </div> -->
 
       </article>
 

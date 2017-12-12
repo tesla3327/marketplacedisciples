@@ -13,6 +13,7 @@ const INTERVIEW_TEMPLATE = 'components/interview_template.html';
 
 const globalContext = require(__dirname + '/../src/globalContext.json');
 globalContext.resources = require(__dirname + '/../src/resources.json');
+globalContext.resourceCategories = Object.keys(globalContext.resources);
 
 // Render just the index for now
 nunjucks.configure(SOURCE, OPTIONS);
