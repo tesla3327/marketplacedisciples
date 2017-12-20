@@ -23,89 +23,27 @@
         <p>
           If you have anything you'd like to add to this list, please <a href="about.html" class="link">send it my way</a>.
         </p>
-        <p>
-          <em>Remember, this list will be updated periodically!</em>
-          <ul>
-            <li><a href="#podcasts" class="link">Podcasts</a></li>
-            <li><a href="#blogs" class="link">Websites and Blogs</a></li>
-            <li><a href="#books" class="link">Books</a></li>
-          </ul>
-        </p>
+        <div class="article__note"><em><strong>Note: </strong>This list will be updated periodically!</em></div>
+        <h4 class="h4">Table of Contents</h3>
+        <ul>
+          {% for category in global.resourceCategories %}
+            <li><a href="#{{ category }}" class="link">{{ category | title }} ({{ global.resources[category].length }})</a></li>
+          {% endfor %}
+        </ul>
+
+        <div class="article__divider"></div>
 
         {% for category in global.resourceCategories %}
-          {{ category | title }}
+          <h3 class="h3" id="{{ category }}">{{ category | title }}</h3>
+
+          {% if category === 'books' %}
+          <p>All of these books are recommended by interviewees, with descriptions taken from Amazon.</p>
+          {% endif %}
+
+          {% for resource in global.resources[category] %}
+            {{ resource_card.resource_card(resource.title, resource.author, resource.url, resource.summary) }}
+          {% endfor %}
         {% endfor %}
-
-        {% for resource in global.resources.podcasts %}
-          {{ resource_card.resource_card(resource.title, resource.author, resource.url, resource.summary) }}
-        {% endfor %}
-
-
-
-
-
-        <!-- 
-        <h3 class="h3" id="podcasts">Podcasts</h3>
-        <div class="card">
-          <h4 class="h4 card__title"><a href="http://www.gospeldriven.is/">Gospel Driven</a></h4>
-          <p class="card__summary">
-            With over 200 episodes, P.J. Simmons interviews Christian entrepreneurs and business owners about how to, “merge business and faith without sacrificing growth and success, or the Gospel.”
-          </p>
-          <a href="http://www.gospeldriven.is/" class="link card__link">Check them out</a>
-        </div>
-
-        <div class="card">
-          <h4 class="h4 card__title"><a href="http://www.theologyofbusiness.com/">Theology of Business</a></h4>
-          <p class="card__summary">
-            Darren Shearer went from seminary to running a full-time business, and now he interviews all sorts of people – including professors, theologians, and business persons – about how to integrate theology with business.
-          </p>
-          <a href="http://www.theologyofbusiness.com/" class="link card__link">Check them out</a>
-        </div>
-
-        <div class="card">
-          <h4 class="h4 card__title"><a href="http://faithandenterprise.org/">Center for Faith and Enterprise</a></h4>
-          <p class="card__summary">
-           Launched nearly 9 years ago by Rob Tribken and a group of other entrepreneurs, their main mission is helping those in business to allow their faith to become a “source of strength and purpose” in their lives.
-          </p>
-          <a href="http://faithandenterprise.org/" class="link card__link">Check them out</a>
-        </div>
-
-        <h3 class="h3" id="blogs">Websites and Blogs</h3>
-        <div class="card">
-          <h4 class="h4 card__title"><a href="https://tifwe.org/">Institute for Faith, Work & Economics</a></h4>
-          <p class="card__summary">
-            “Our mission is to educate and inspire Christians to live out a Biblical theology that integrates faith, work, and economics.”
-            <br />
-            <br />
-            They have a very interesting blog, as well as many articles on economics from a Biblical and theological perspective.
-          </p>
-          <a href="https://tifwe.org/" class="link card__link">Check them out</a>
-        </div>
-
-        <div class="card">
-          <h4 class="h4 card__title"><a href="http://businessasmission.com/">Business as Mission</a></h4>
-          <p class="card__summary">
-            Business as Mission is built on the fundamental belief that God works through businesses to change the world and redeem it from it’s fallen state. They exist to help tap the business resources within the Church for missional impact.
-          </p>
-          <a href="http://businessasmission.com/" class="link card__link">Check them out</a>
-        </div>
-
-        <h3 class="h3" id="books">Books</h3>
-        <p>
-          All of these books were recommended by interviewees.
-          <br/>
-          <em>Descriptions taken from Amazon</em>
-        </p>
-
-        <div class="card">
-          <h4 class="h4 card__title"><a href="https://www.amazon.ca/God-Owns-Business-Stanley-Tam/dp/1600661874">God Owns My Business</a></h4>
-          <em>by Stanley Tam</em>
-          <br />
-          <p class="card__summary">
-            God Owns My Business is more than a book about a successful businessman. It is the chronicle of how an average man can, with God's guidance and a willing heart, succeed in any endeavor [...]
-          </p>
-          <a href="https://www.amazon.ca/God-Owns-Business-Stanley-Tam/dp/1600661874" class="link card__link">Check it out</a>
-        </div> -->
 
       </article>
 
