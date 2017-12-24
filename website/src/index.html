@@ -1,5 +1,4 @@
 {% extends "components/main_template.html" %}
-{% import "components/interview_list.html" as interview_list %}
 
 {% block content %}
     <!-- Hero -->
@@ -18,14 +17,7 @@
         <p class="card__summary">Any Christian that wants to learn more about how faith and business work together for God's kingdom.</p>
       </div>
       
-      <div class="section section--interviews">
-        <h3 class="h3 section__title">Recent Interviews</h3>
-        <p>
-          A new interview is published every 2 weeks!
-        </p>
-        {{ interview_list.interview_list(global.latest, global, pathToRoot) }}
-      </div>
-
+      {% include "components/recent_interviews.html" %}
       {% include "components/signup_form.html" %}
 
     </div>
