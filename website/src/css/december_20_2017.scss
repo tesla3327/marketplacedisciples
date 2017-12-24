@@ -13,7 +13,7 @@ $primary-dark: darken(saturate($primary, 5%), 3%);
 
 $secondary: #0C4E2E;
 $accent: #d9bb26;
-$accent-dark: darken(saturate($accent, 10%), 15%);
+$accent-dark: darken(saturate($accent, 10%), 10%);
 $accent-darkest: darken(saturate($accent, 10%), 25%);
 $accent-light: lighten(desaturate($accent, 5%), 15%);
 
@@ -43,6 +43,11 @@ body {
   margin: 0;
 }
 
+.invert {
+  background: lighten($body-text, 10);
+  color: $primary-light;
+}
+
 body * {
 	box-sizing: border-box;
 	outline: none;
@@ -59,17 +64,16 @@ input {
 
 input[type=email] {
 	width: 100%;
-	margin-bottom: 0;
-	// border: 1px solid $primary-lighter;
+  margin-bottom: 0;
   border: none;
-  background: rgba(0,0,0,0.3);
-  color: $body-text;
-
+  border-bottom: 3px solid $body-text-dark;
+  background: $body-text;
+  color: $primary-light;
   &::-moz-placeholder,
   &::-ms-placeholder,
   &::-webkit-placeholder,
   &::placeholder {
-    color: rgba($body-text, 0.6) !important;
+    color: $body-text-dark !important;
   }
 }
 
@@ -83,9 +87,9 @@ input[type=submit] {
   font-weight: 700;
   font-size: $base-font * 1.1;
   box-shadow:
-    1px 1px 0px $accent-darkest,
-    2px 2px 0px $accent-darkest,
-    0 10px 30px rgba(0,0,0,0.2);
+    1px 1px 0px $accent-dark,
+    2px 2px 0px $accent-dark,
+    0 5px 10px rgba(0,0,0,0.2);
   -webkit-appearance: none;
 }
 
@@ -457,7 +461,10 @@ footer {
 }
 
 .section--signup {
-  margin-bottom: $rhythm * 2;
+  // margin: 0 -0.5em $rhythm * 2 -0.5em;
+  padding: 1em;
+  border-radius: 2px;
+  color: $primary-light;
 }
 
 .section--signup #mc_embed_signup {
