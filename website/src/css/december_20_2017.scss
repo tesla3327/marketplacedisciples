@@ -624,17 +624,12 @@ footer {
   }
 
   .section--hero {
-    // margin-left: -3em;
-    padding: $rhythm * 2 0;
-  }
-
-  .hero--image {
-    // margin-left: 3em;
+    padding: $rhythm 0;
   }
 
   .section--hero__tagline {
     font-size: 3.5vw;
-    line-height: 3.5vw;
+    line-height: 5vw;
   }
 
   .article__quote {
@@ -764,7 +759,7 @@ footer {
 
   .section--hero__tagline {
     font-size: 35px;
-    line-height: 35px;
+    line-height: 50px;
   }
 
   .h2--sub-title {
