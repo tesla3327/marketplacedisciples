@@ -19,7 +19,9 @@
         <h1 class="h1 h1--title">{{ interview.title | safe }}</h1>
         <div class="sub-header">
           <h2 class="h2 h2--sub-title">{{ interview.published }}</h2>
-          <h2 class="h2 h2--sub-title">with {{ interview.name | safe }}</h2>
+          {% if interview.name !== undefined %}
+            <h2 class="h2 h2--sub-title">with {{ interview.name | safe }}</h2>
+          {% endif %}
         </div>
       </div>
 
@@ -35,5 +37,7 @@
         <h3 class="h3 section__title">Other Interviews</h3>
         {{ interview_list.interview_list(interview.relatedInterviews, global, pathToRoot) }}
       </div>
+
+      {% include "components/signup_form.html" %}
     </div>
 {% endblock %}

@@ -3,10 +3,18 @@
   <h4 class="h4 card__title"><a href="{{ pathToRoot }}{{ url }}">{{ title | safe }}</a></h4>
   <div class="sub-header">
     <h5 class="h5">{{ published }}</h5>
-    <h5 class="h5">with {{ fullname }}</h5>
+    {% if fullname !== undefined %}
+      <h5 class="h5">with {{ fullname }}</h5>
+    {% endif %}
   </div>
   <p class="card__summary">{{ summary | safe }}</p>
-  <a href="{{ pathToRoot }}{{ url }}" class="link card__link">Read {{ firstname }}'s Interview</a>
+  <a href="{{ pathToRoot }}{{ url }}" class="link card__link">
+    {% if fullname !== undefined %}
+      Read {{ firstname }}'s interview
+    {% else %}
+      Read more
+    {% endif %}
+  </a>
 </div>
 {% endmacro %}
 

@@ -48,13 +48,7 @@
       </article>
 
       {% include "components/signup_form.html" %}
-
-      <div class="section section--interviews">
-        <h3 class="h3 section__title">Recent Interviews</h3>
-        <p>
-          A new interview is published every 2 weeks!
-        </p>
-        {{ interview_list.interview_list(global.latest, global, pathToRoot) }}
-      </div>
+      {% include "components/recent_interviews.html" %}
+      {% include "components/signup_form.html" %}
     </div>
 {% endblock %}

@@ -67,7 +67,10 @@ const buildInterviews = () => {
     const interviewData = JSON.parse(fs.readFileSync(path.resolve(PROCESS + INTERVIEWS + filename), 'utf8'));
 
     interviewData.id = filename.split('.')[0];
-    interviewData.firstname = interviewData.name.split(' ')[0];
+
+    if (interviewData.name) {
+      interviewData.firstname = interviewData.name.split(' ')[0];
+    }
 
     interviewList.push(interviewData);
   });

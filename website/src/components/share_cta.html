@@ -2,7 +2,12 @@
 <div class="article__divider"></div>
 <h4 class="h4 h4--question">Did you like this interview?</h4>
 <p>
-	If you enjoyed this interview with {{ interview.name }}, then please share it! It would mean so much to me.
+	{% if interview.name !== undefined %}
+		If you enjoyed this interview with {{ interview.name }},
+	{% else %}
+		If you enjoyed this post,
+	{% endif %}
+	then please share it! It would mean so much to me.
 </p>
 <p>
 	<img class="social-media-logo" src="{{ pathToRoot }}img/facebook_icon.png">

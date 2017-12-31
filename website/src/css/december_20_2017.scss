@@ -155,22 +155,25 @@ input[type=submit] {
   line-height: $rhythm * 1;
   color: $body-text;
   text-decoration: none;
-  margin-top: $rhythm * 2;
+  margin-top: $rhythm * 2.5;
 
   .interview &:not(:first-child) {
-    padding: $rhythm * 2 0 $rhythm / 2 0;
+    padding: 0 0 $rhythm / 2 0;
   }
 }
 
 .h5 {
-  font-size: $base-font;
-  font-weight: 400;
-  line-height: $rhythm * 1.2;
+  font-size: $base-font * 1.2;
+  font-weight: bold;
+  line-height: $rhythm;
+  margin: $rhythm 0 $rhythm / 3 0;
 }
 
 p {
 	margin: 0;
-	padding: 0 0 $rhythm 0;
+	& + p {
+    padding: $rhythm 0 0 0;
+  }
 }
 
 .link {
@@ -198,17 +201,29 @@ p {
   padding: 0 1.5em;
 }
 
-ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+ul, ol {
+	padding: 0 0 $rhythm 0;
+  margin: 0 0 0 1em;
+  
+  li {
+    margin-left: 1em;
+  }
 }
 
 footer {
 	display: flex;
 	width: 100%;
 	background: $primary-dark;
-	padding: 1em 1em 2em 1em;
+  padding: 1em 1em 2em 1em;
+  
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      margin: 0;
+    }
+  }
 
 	.footer-container {
 		display: flex;
@@ -441,7 +456,11 @@ footer {
 
 .section--interviews__interviews {
 	display: flex;
-	flex-direction: column;
+  flex-direction: column;
+  
+  p + & {
+    margin-top: $rhythm / 2;
+  }
 }
 
 .section--signup,
@@ -478,6 +497,11 @@ footer {
   }
 }
 
+.article__anchor {
+  position: relative;
+  top: -130px;
+}
+
 .article__note {
   background: rgba($primary-light, 0.5);
   padding: $rhythm / 2;
@@ -488,7 +512,7 @@ footer {
 }
 
 .article__divider {
-  margin: $rhythm auto $rhythm auto;
+  margin: $rhythm * 2 auto;
   background: $body-text;
   height: 20px;
   background: $body-text;
@@ -504,6 +528,14 @@ footer {
   &--small {
     height: 8px;
     width: 80px;
+
+    &:last-child {
+      margin: $rhythm auto $rhythm * 2 auto;
+    }
+
+    &:first-child {
+      margin: $rhythm * 2 auto $rhythm auto;
+    }
   }
 }
 
@@ -512,6 +544,18 @@ footer {
   padding: 1em 1em 1.3em 1em;
   border-radius: 2px;
   background: rgba($primary-light, 0.5);
+
+  .h5 {
+    font-size: $base-font * 1.1;
+    line-height: $rhythm;
+    font-weight: 400;
+    padding: 0;
+    margin: 0.5em 0 0 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card--inverted {
@@ -606,6 +650,10 @@ footer {
     &:active {
       transform: translateY(1px);
     }
+  }
+
+  ul, ol {
+    margin: 0 0 0 2em;
   }
 
   .h1--title {
