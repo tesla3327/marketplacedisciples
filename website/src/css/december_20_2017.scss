@@ -465,10 +465,7 @@ footer {
 
 .section--signup,
 .section--signup .clear {
-	display: flex;
-	font-family: 'Rambla';
-	font-size: $base-font * 1.4;
-	font-weight: bold;
+  display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
@@ -479,6 +476,17 @@ footer {
 
   .card {
     width: calc(100% + 0.7em);
+    padding: 1.5em; 
+  }
+
+  label {
+    font-family: 'Rambla';
+    font-size: $base-font * 1.4;
+    font-weight: bold;
+  }
+
+  p {
+    padding-top: $rhythm / 2;
   }
 }
 
@@ -642,6 +650,7 @@ footer {
     background: $accent;
     transition: background 0.2s ease-in-out;
     transform: translateY(0);
+    margin-bottom: 0;
 
     &:hover {
       background: $accent-light;
