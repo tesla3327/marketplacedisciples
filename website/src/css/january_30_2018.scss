@@ -495,13 +495,16 @@ footer {
 }
 
 .article__quote {
-  padding: 0 $rhythm/2 $rhythm / 2 $rhythm/2;
-  font-style: italic;
-  text-align: center;
+  padding: $rhythm * 3/2 0 $rhythm * 3 / 2 $rhythm/2;
 
   p {
     margin: 0;
-    padding: 0;
+    padding: 0 1em 0 0;
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.8em;
+    text-align: right;
+    line-height: 1.2em;
+    border-right: 5px solid $accent;
   }
 }
 
@@ -696,7 +699,7 @@ footer {
   }
 
   .article__quote {
-    padding: 0 $rhythm * 4 $rhythm / 2 $rhythm * 4;
+    padding: $rhythm * 3/2 0 $rhythm * 2 $rhythm * 4;
   }
 
   .h2--sub-title {
