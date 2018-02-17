@@ -309,6 +309,7 @@ footer {
 .nav__list-item {
   color: $primary-light;
   padding: 1rem 0;
+  margin: 0;
   list-style: none;
   text-decoration: none;
   font-family: 'Rambla', sans-serif;
@@ -316,10 +317,6 @@ footer {
   font-weight: 700;
   width: 100%;
   height: 100%;
-}
-
-.nav__list-item--accent {
-  text-decoration: underline;
 }
 
 .nav__menu-toggle {
@@ -371,7 +368,7 @@ footer {
   background-image: linear-gradient(
     -160deg,
     $body-text,
-    rgba($primary-lighter, 0.5)
+    #859ead
   );
   overflow: hidden;
   z-index: 99;
