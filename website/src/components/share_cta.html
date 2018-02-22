@@ -1,11 +1,18 @@
 
 <div class="article__divider"></div>
-<h4 class="h4 h4--question">Did you like this interview?</h4>
+<h4 class="h4 h4--question">
+	Did you like this
+	{% if interview.name !== undefined %}
+	interview?
+	{% else %}
+	article?
+	{% endif %}
+</h4>
 <p>
 	{% if interview.name !== undefined %}
 		If you enjoyed this interview with {{ interview.name }},
 	{% else %}
-		If you enjoyed this post,
+		If you enjoyed this article,
 	{% endif %}
 	then please share it! It would mean so much to me.
 </p>

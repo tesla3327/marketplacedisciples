@@ -142,11 +142,16 @@ input[type=submit] {
 .h3 {
 	font-size: $base-font * 1.7;
 	font-weight: 400;
-  line-height: $rhythm * 1.7;
+  line-height: $rhythm * 1.3;
+  padding-bottom: $rhythm;
 
   &:not(:first-child) {
     padding-top: $rhythm;
   }
+}
+
+.interview .h3 {
+  margin-top: $rhythm * 2;
 }
 
 .h4, .h4 a {
@@ -156,10 +161,7 @@ input[type=submit] {
   color: $body-text;
   text-decoration: none;
   margin-top: $rhythm * 2.5;
-
-  .interview &:not(:first-child) {
-    padding: 0 0 $rhythm / 2 0;
-  }
+  padding: 0 0 $rhythm / 2 0;
 }
 
 .h5 {
@@ -397,6 +399,10 @@ footer {
 
 .section--title {
   margin: $rhythm * 1.5 0;
+}
+
+.section__title {
+  padding-bottom: $rhythm / 2;
 }
 
 .section--benefits {
