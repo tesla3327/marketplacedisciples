@@ -1,18 +1,19 @@
 {
-	"cssPath": "css/feb_22_2018.css",
-	"interviewOrder": [
-		"startup-stories",
-		"steve-adema",
-		"trish-pauls",
-		"business-as-a-ministry",
-		"jannice-moore",
-		"bill-fuchs",
-		"gary-gehiere",
-		"chris-klaassen",
-		"joe-peristy",
-		"ryan-hindmarsh",
-		"peter-rhebergen",
-		"gayle-goossen",
-		"melissa-mather"
-	]
+  "cssPath": "css/feb_22_2018.css",
+  "interviewOrder": [
+    "dave-bylsma",
+    "startup-stories",
+    "steve-adema",
+    "trish-pauls",
+    "business-as-a-ministry",
+    "jannice-moore",
+    "bill-fuchs",
+    "gary-gehiere",
+    "chris-klaassen",
+    "joe-peristy",
+    "ryan-hindmarsh",
+    "peter-rhebergen",
+    "gayle-goossen",
+    "melissa-mather"
+  ]
 }
