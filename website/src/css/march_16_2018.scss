@@ -528,20 +528,17 @@ footer {
 
 .article__divider {
   margin: $rhythm * 2 auto;
-  background: $body-text;
-  height: 20px;
+  height: 3px;
   background: $body-text;
   background-image: linear-gradient(
     10deg,
     rgba($primary-lighter, 0.8),
     $body-text
   );
-  transform: rotate(-10deg) skewX(-10deg);
   width: 150px;
   z-index: 1;
 
   &--small {
-    height: 8px;
     width: 80px;
 
     &:last-child {
