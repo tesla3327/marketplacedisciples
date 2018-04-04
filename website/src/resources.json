@@ -1,30 +1,48 @@
 {
   "podcasts": [
     {
+      "title": "The Christian Entrepreneurs Podcast",
+      "url":
+        "https://ambitiousentrepreneurnetwork.com/christian-entrepreneurs-podcast/",
+      "summary":
+        "Daily conversations with Christian Entrepreneurs to inspire and empower Christian Business Owners to walk strongly in their faith, WHILE build a thriving business that honours Him, in every way. <br><br>You can check out <a class='link' href='https://ambitiousentrepreneurnetwork.com/ep-59-business-is-a-scalable-self-sustaining-way-of-serving-and-loving-others/'>my interview with Annemarie here</a>."
+    },
+    {
       "title": "Gospel Driven",
-      "summary": "With over 200 episodes, P.J. Simmons interviews Christian entrepreneurs and business owners about how to, &#34;merge business and faith without sacrificing growth and success, or the Gospel.&#34;",
+      "summary":
+        "With over 200 episodes, P.J. Simmons interviews Christian entrepreneurs and business owners about how to, &#34;merge business and faith without sacrificing growth and success, or the Gospel.&#34;",
       "url": "http://www.gospeldriven.is/"
     },
     {
       "title": "Theology of Business",
       "url": "http://www.theologyofbusiness.com/",
-      "summary": "Darren Shearer went from seminary to running a full-time business, and now he interviews all sorts of people – including professors, theologians, and business persons – about how to integrate theology with business."
+      "summary":
+        "Darren Shearer went from seminary to running a full-time business, and now he interviews all sorts of people – including professors, theologians, and business persons – about how to integrate theology with business."
     },
     {
       "title": "Center for Faith and Enterprise",
-      "summary": "Launched nearly 9 years ago by Rob Tribken and a group of other entrepreneurs, their main mission is helping those in business to allow their faith to become a &#34;source of strength and purpose&#34; in their lives.",
+      "summary":
+        "Launched nearly 9 years ago by Rob Tribken and a group of other entrepreneurs, their main mission is helping those in business to allow their faith to become a &#34;source of strength and purpose&#34; in their lives.",
       "url": "http://faithandenterprise.org/"
     }
   ],
-  "blogs": [
+  "organizations": [
+    {
+      "title": "At Work On Purpose",
+      "summary":
+        "At Work on Purpose has a vision to restore full Christian commitment and contribution to the work world, one irresistibly transformed work life at a time.",
+      "url": "http://atworkonpurpose.org/"
+    },
     {
       "title": "Institute for Faith, Work & Economics",
-      "summary": "&#34;Our mission is to educate and inspire Christians to live out a Biblical theology that integrates faith, work, and economics.&#34;<br/>They have a very interesting blog, as well as many articles on economics from a Biblical and theological perspective.",
+      "summary":
+        "&#34;Our mission is to educate and inspire Christians to live out a Biblical theology that integrates faith, work, and economics.&#34;<br/>They have a very interesting blog, as well as many articles on economics from a Biblical and theological perspective.",
       "url": "https://tifwe.org/"
     },
     {
       "title": "Business as Mission",
-      "summary": "Business as Mission is built on the fundamental belief that God works through businesses to change the world and redeem it from it’s fallen state. They exist to help tap the business resources within the Church for missional impact.",
+      "summary":
+        "Business as Mission is built on the fundamental belief that God works through businesses to change the world and redeem it from it’s fallen state. They exist to help tap the business resources within the Church for missional impact.",
       "url": "http://businessasmission.com/"
     }
   ],
@@ -32,50 +50,64 @@
     {
       "title": "God Owns My Business",
       "author": "Stanley Tam",
-      "summary": "God Owns My Business is more than a book about a successful businessman. It is the chronicle of how an average man can, with God's guidance and a willing heart, succeed in any endeavor [...]",
+      "summary":
+        "God Owns My Business is more than a book about a successful businessman. It is the chronicle of how an average man can, with God's guidance and a willing heart, succeed in any endeavor [...]",
       "url": "https://www.amazon.ca/God-Owns-Business-Stanley-Tam/dp/1600661874"
     },
     {
       "title": "God in the Marketplace",
       "author": "Henry and Richard Blackaby",
-      "summary": "Aside from Experiencing God, Henry Blackaby has made his greatest impact by ministering directly to Fortune 100 and 500 CEOs, advising them on how to effectively blend their faith with [...]",
-      "url": "https://www.amazon.ca/God-Marketplace-Questions-ExecutivesAsk-Business/dp/0805446885"
+      "summary":
+        "Aside from Experiencing God, Henry Blackaby has made his greatest impact by ministering directly to Fortune 100 and 500 CEOs, advising them on how to effectively blend their faith with [...]",
+      "url":
+        "https://www.amazon.ca/God-Marketplace-Questions-ExecutivesAsk-Business/dp/0805446885"
     },
     {
       "title": "People Over Profit",
       "author": "Dale Partridge",
-      "summary": "Every day major headlines tell the story of a new and better American marketplace. Established corporations have begun reevaluating the quality of their products, the ethics of their supply chain, and how they can [...]",
-      "url": "https://www.amazon.ca/People-Over-Profit-Purpose-Successful/dp/0718021746"
+      "summary":
+        "Every day major headlines tell the story of a new and better American marketplace. Established corporations have begun reevaluating the quality of their products, the ethics of their supply chain, and how they can [...]",
+      "url":
+        "https://www.amazon.ca/People-Over-Profit-Purpose-Successful/dp/0718021746"
     },
     {
       "title": "Strengthening the Soul of Your Leadership",
       "author": "Ruth Haley Barton",
-      "summary": "\"I'm tired of helping others enjoy God.\" \"I just want to enjoy God for myself.\" With this painful admission, Ruth Haley Barton invites us to an honest exploration of what happens when spiritual leaders lose track of [...]",
-      "url": "https://www.amazon.ca/Strengthening-Soul-Leadership-Haley-Barton/dp/083083513X"
+      "summary":
+        "\"I'm tired of helping others enjoy God.\" \"I just want to enjoy God for myself.\" With this painful admission, Ruth Haley Barton invites us to an honest exploration of what happens when spiritual leaders lose track of [...]",
+      "url":
+        "https://www.amazon.ca/Strengthening-Soul-Leadership-Haley-Barton/dp/083083513X"
     },
     {
       "title": "Sacred Rhythms",
       "author": "Ruth Haley Barton",
-      "summary": "Picking up on the monastic tradition of creating a \"rule of life\" that allows for regular space for the practice of spiritual disciplines, Ruth Haley Barton takes you more deeply into understanding seven key spiritual [...]",
-      "url": "https://www.amazon.ca/Sacred-Rhythms-Arranging-Spiritual-Transformation/dp/0830833331"
+      "summary":
+        "Picking up on the monastic tradition of creating a \"rule of life\" that allows for regular space for the practice of spiritual disciplines, Ruth Haley Barton takes you more deeply into understanding seven key spiritual [...]",
+      "url":
+        "https://www.amazon.ca/Sacred-Rhythms-Arranging-Spiritual-Transformation/dp/0830833331"
     },
     {
       "title": "God in My Everything",
       "author": "Ken Shigamatsu",
-      "summary": "Ken Shigematsu shows that spiritual formation is more than just solitude and contemplative reflections. Spiritual formation happens in the everyday, in each and every moment of life.  For those caught up in the busyness of work, [...]",
-      "url": "https://www.amazon.ca/God-My-Everything-Ancient-Rhythm/dp/0310499259"
+      "summary":
+        "Ken Shigematsu shows that spiritual formation is more than just solitude and contemplative reflections. Spiritual formation happens in the everyday, in each and every moment of life.  For those caught up in the busyness of work, [...]",
+      "url":
+        "https://www.amazon.ca/God-My-Everything-Ancient-Rhythm/dp/0310499259"
     },
     {
       "title": "Too Busy Not to Pray",
       "author": "Bill Hybels",
-      "summary": "For the past twenty years, thousands have enjoyed Bill Hybels's insightful and readable ideas on prayer and spending time with God. Now this new edition of his contemporary classic has been revised and expanded, including two new chapters. [...]",
+      "summary":
+        "For the past twenty years, thousands have enjoyed Bill Hybels's insightful and readable ideas on prayer and spending time with God. Now this new edition of his contemporary classic has been revised and expanded, including two new chapters. [...]",
       "url": "https://www.amazon.ca/Too-Busy-Pray-Bill-Hybels/dp/0830834753"
     },
     {
       "title": "Christian Reflections on the Leadership Challenge",
       "author": "James Kouzes and Barry Posner",
-      "summary": "Christian Reflections on The Leadership Challenge is a faith-based companion to the best-selling leadership book of all time--The Leadership Challenge.  Grounded in Jim and Barry’s time-tested research, Christian Reflections on The Leadership Challenge describes their Five Practices of Exemplary [...]",
-      "url": "https://www.amazon.ca/Christian-Reflections-Leadership-Challenge-Maxwell/dp/0787983373"
+      "summary":
+        "Christian Reflections on The Leadership Challenge is a faith-based companion to the best-selling leadership book of all time--The Leadership Challenge.  Grounded in Jim and Barry’s time-tested research, Christian Reflections on The Leadership Challenge describes their Five Practices of Exemplary [...]",
+      "url":
+        "https://www.amazon.ca/Christian-Reflections-Leadership-Challenge-Maxwell/dp/0787983373"
     }
   ]
 }
