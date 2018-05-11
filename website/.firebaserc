@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "production": "md-production-8951b",
+    "staging": "md-staging-9003f"
+  }
+}
