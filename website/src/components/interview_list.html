@@ -18,14 +18,14 @@
 </div>
 {% endmacro %}
 
-{% macro interview_list(interviewList, global, pathToRoot) %}
+{% macro interview_list(interviewList, global, pathToRoot, linkToAll) %}
 <div class="section--interviews__interviews">
   {% for id in interviewList %}
     {% set i = global.interviews[id] %}
     {{ interview_card(i.title, i.firstname, i.name, i.url, i.summary, i.published, pathToRoot) }}
   {% endfor %}
 
-  {% if interviewList.length < global.interviewOrder.length %}
+  {% if linkToAll %}
   <div class="card">
     <a class="link link--accent" href="{{ pathToRoot }}interviews.html">
       All interviews

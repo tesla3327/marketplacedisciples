@@ -48,6 +48,10 @@
         <div class="article__divider"></div>
       </article>
 
-      {% include "components/recent_interviews.html" %}
+      <div class="section section--interviews">
+        <h3 class="h3 section__title">Most popular interviews</h3>
+        {{ interview_list.interview_list(global.popularInterviews, global, pathToRoot, true) }}
+      </div>
+      
     </div>
 {% endblock %}
