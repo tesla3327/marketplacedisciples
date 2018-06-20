@@ -5,26 +5,45 @@
     <!-- Hero -->
     <div class="hero--image">
       <div class="content">
-          <div id="hero" class="section section--hero">
-            <h1 class="h1 h1--title">Marketplace Disciples</h1>
-            <p class="section--hero__tagline">Interviews with Christian leaders in business</p>
+
+        <!-- Copy -->
+        <div id="hero" class="section section--hero">
+          <h1 class="h1 h1--title">Feel alone as a Christian in business?</h1>
+          <p class="section--hero__tagline">There are others facing the same challenges you are &mdash; subscribe to get their stories</p>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="mc_embed_signup">
+          <form action="//marketplacedisciples.us15.list-manage.com/subscribe/post?u=c0d2563290c383ffe17cc1a0b&amp;id=5152f6cbd0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_c0d2563290c383ffe17cc1a0b_5152f6cbd0" tabindex="-1" value="">
+              </div>
+              <div class="clear">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- As Seen In -->
+        <!-- <div class="section--hero__seen-in">
+          As seen in:
+          <div class="logos">
+            <div>
+              <img src="./img/bam_edited.png"></img>
+            </div>
+            <div>
+              <img src="./img/tce_podcast.jpg"></img>
+            </div>
           </div>
+        </div> -->
+
+        <div class="section--hero__spacer"></div>
       </div>
-    </div>
-
-    <div class="content">
-      {% include "components/signup_form.html" %}
-
-      <div class="section section--interviews">
-        <h3 class="h3 section__title">Most popular interviews</h3>
-        {{ interview_list.interview_list(global.popularInterviews, global, pathToRoot, true) }}
-      </div>
-
-      <div class="section section--interviews">
-        <h3 class="h3 section__title">Recent Interviews</h3>
-        {{ interview_list.interview_list(global.latest, global, pathToRoot, true) }}
-      </div>
-
-      {% include "components/signup_form.html" %}
     </div>
 {% endblock %}
+
+{% block footer %}{% endblock %}

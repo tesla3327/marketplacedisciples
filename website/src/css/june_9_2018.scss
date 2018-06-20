@@ -61,6 +61,7 @@ input[type=email] {
 	width: 100%;
   margin-bottom: 0;
   border: none;
+  font-family: 'Rambla', sans-serif;
   border-bottom: 3px solid $body-text-dark;
   background: $body-text;
   color: $primary-light;
@@ -410,21 +411,56 @@ footer {
 }
 
 .section--hero {
-  // padding: $rhythm 0 $rhythm / 2 0;
+  padding: 10px 0 0 0;
   text-align: center;
+
+  &__spacer {
+    height: 20vh;
+    width: 100%;
+  }
+
+  .h1--title {
+    font-size: $base-font * 2;
+    line-height: $base-font * 2.3;
+  }
+
+  &__tagline {
+    padding-top: $rhythm * 0.8;
+    font-size: $base-font * 1.4;
+    font-family: 'Rambla', sans-serif;
+  }
+
+  &__seen-in {
+    display: none;
+  }
 }
 
 .hero--image {
   margin-left: -1.5em;
   margin-right: -1.5em;
-  width: calc(100%);
+  width: 100vw;
+  height: calc(100vh - 50px);
   background-image: url("../img/hero.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
+
+  #mc_embed_signup {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  #mc_embed_signup_scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .content {
+    height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   &--interviews {
@@ -443,10 +479,30 @@ footer {
   }
 }
 
-.section--hero__tagline {
-	padding-top: $rhythm * 0.5;
-	font-size: $base-font * 1.3;
-  font-family: 'Rambla', sans-serif;
+.title--image {
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--interviews {
+    background-image: url("../img/banner_6.jpg");
+  }
+
+  &--about {
+    background-image: url("../img/banner_2.jpg");
+  }
+
+  &--share-your-story {
+    background-image: url("../img/banner_3.jpg");
+    background-position: bottom;
+  }
 }
 
 .section--benefits .card {
@@ -622,6 +678,10 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .section--hero {
+    padding: $rhythm * 1.2 0;
+  }
 }
 
 @media (min-width: 750px) {
@@ -669,27 +729,41 @@ footer {
     margin: 0 0 0 2em;
   }
 
-  .h1--title {
-    font-size: 4.5vw;
-    line-height: 5.5vw;
-  }
-
   .section--title {
     margin: 3vw 0;
   }
 
   .section--hero {
-    // margin-left: -3em;
     padding: $rhythm * 2 0;
+
+    .h1--title {
+      font-size: 5.4vw;
+      line-height: 6vw;
+    }
+
+    &__tagline {
+      font-size: 3.5vw;
+      line-height: 3.5vw;
+    }
+
+    &__seen-in {
+      display: initial;
+
+      .logos {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      img {
+        padding: 1em;
+        width: 150px;
+        height: auto;
+      }
+    }
   }
 
   .hero--image {
-    // margin-left: 3em;
-  }
-
-  .section--hero__tagline {
-    font-size: 3.5vw;
-    line-height: 3.5vw;
+    height: calc(100vh - 50px);
   }
 
   .article__quote {
@@ -816,12 +890,17 @@ footer {
     margin: 30px 0;
   }
 
-  .section--hero__tagline {
-    font-size: 35px;
-    line-height: 35px;
-  }
+  .section--hero {
+    max-width: 850px;
 
-  .h2--sub-title {
-    // font-size: $base-font * 1.2;
+    .h1--title {
+      font-size: $base-font * 3;
+      line-height: $base-font * 3.3;
+    }
+
+    &__tagline {
+      font-size: 35px;
+      line-height: 50px;
+    }
   }
 }
