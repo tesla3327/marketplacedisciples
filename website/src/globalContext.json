@@ -1,11 +1,11 @@
 {
   "cssPath": "css/june_9_2018.css",
-  "popularInterviews": [
+  "popular": [
     "business-as-a-ministry",
     "relationships-community",
     "trish-pauls"
   ],
-  "interviewOrder": [
+  "postOrder": [
     "relationships-community",
     "relationships-clients",
     "relationships-employees",

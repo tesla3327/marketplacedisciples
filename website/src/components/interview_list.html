@@ -21,7 +21,7 @@
 {% macro interview_list(interviewList, global, pathToRoot, linkToAll) %}
 <div class="section--interviews__interviews">
   {% for id in interviewList %}
-    {% set i = global.interviews[id] %}
+    {% set i = global.posts[id] %}
     {{ interview_card(i.title, i.firstname, i.name, i.url, i.summary, i.published, pathToRoot) }}
   {% endfor %}
 

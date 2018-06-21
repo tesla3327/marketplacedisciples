@@ -3,30 +3,30 @@
 
 {% block meta %}
     <meta name="description" content="{{ interview.summary | striptags }}">
-    <title>{{ interview.title }} - Marketplace Disciples</title>
+    <title>{{ post.title }} - Marketplace Disciples</title>
 
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.marketplacedisciples.com/{{ interview.url }}" />
+    <meta property="og:url" content="http://www.marketplacedisciples.com/{{ post.url }}" />
     <meta property="og:image" content="http://www.marketplacedisciples.com/img/facebook_share.png"/> 
-    <meta property="og:title" content="{{ interview.title }}" />
-    <meta property="og:description" content="{{ interview.summary | striptags }}" />
+    <meta property="og:title" content="{{ post.title }}" />
+    <meta property="og:description" content="{{ post.summary | striptags }}" />
 {% endblock %}
 
 {% block content %}
     <div class="content">
       <div class="section section--title">
-        <h1 class="h1 h1--title">{{ interview.title | safe }}</h1>
+        <h1 class="h1 h1--title">{{ post.title | safe }}</h1>
         <div class="sub-header">
-          <h2 class="h2 h2--sub-title">{{ interview.published }}</h2>
-          {% if interview.name !== undefined %}
-            <h2 class="h2 h2--sub-title">with {{ interview.name | safe }}</h2>
+          <h2 class="h2 h2--sub-title">{{ post.published }}</h2>
+          {% if post.name !== undefined %}
+            <h2 class="h2 h2--sub-title">with {{ post.name | safe }}</h2>
           {% endif %}
         </div>
       </div>
 
       <article class="section section--article interview">
-        {% include "../interviews/" + interview.id + ".html" %}
+        {% include "../posts/" + post.id + ".html" %}
 
         {% include "components/share_cta.html" %}
 
@@ -35,7 +35,7 @@
 
       <div class="section section--interviews">
         <h3 class="h3 section__title">More you'll like</h3>
-        {{ interview_list.interview_list(interview.relatedInterviews, global, pathToRoot) }}
+        {{ interview_list.interview_list(post.related, global, pathToRoot) }}
       </div>
 
       {% include "components/signup_form.html" %}

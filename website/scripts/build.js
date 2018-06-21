@@ -7,9 +7,9 @@ const fs = require('fs');
 const OUTPUT = 'dist/'
 const SOURCE = 'src/';
 const OPTIONS = {};
-const INTERVIEWS = 'src/interviews/';
+const POSTS = 'src/posts/';
 const PROCESS = process.cwd() + '/';
-const INTERVIEW_TEMPLATE = 'components/interview_template.html';
+const POST_TEMPLATE = 'components/interview_template.html';
 
 const globalContext = require(__dirname + '/../src/globalContext.json');
 globalContext.resources = require(__dirname + '/../src/resources.json');
@@ -40,62 +40,59 @@ const buildPages = () => {
   pages.forEach(renderPage);
 };
 
-const renderInterview = (interview) => {
-  console.log(interview.url);
+const renderPost = (post) => {
+  console.log(post.url);
   const data = nunjucks.render(
-    INTERVIEW_TEMPLATE,
+    POST_TEMPLATE,
     Object.assign(
       {},
       {
         pathToRoot: '../',
-        interview,
+        post,
         global: globalContext,
       }
     )
   );
-  const outputPath = path.resolve(PROCESS + OUTPUT + interview.url);
+  const outputPath = path.resolve(PROCESS + OUTPUT + post.url);
 
   fs.writeFileSync(outputPath, data);
 };
 
-const buildInterviews = () => {
-  const interviewPaths = getFilesOfType(path.resolve(PROCESS + INTERVIEWS), '.json');
-  const interviewList = [];
+const buildPosts = () => {
+  const postPaths = getFilesOfType(path.resolve(PROCESS + POSTS), '.json');
+  const postList = [];
 
-  // Grab each interview, using the filename as the id
-  interviewPaths.forEach(filename => {
-    const interviewData = JSON.parse(fs.readFileSync(path.resolve(PROCESS + INTERVIEWS + filename), 'utf8'));
+  // Grab each post, using the filename as the id
+  postPaths.forEach(filename => {
+    const postData = JSON.parse(fs.readFileSync(path.resolve(PROCESS + POSTS + filename), 'utf8'));
 
-    interviewData.id = filename.split('.')[0];
+    postData.id = filename.split('.')[0];
 
-    if (interviewData.name) {
-      interviewData.firstname = interviewData.name.split(' ')[0];
+    if (postData.name) {
+      postData.firstname = postData.name.split(' ')[0];
     }
 
-    interviewList.push(interviewData);
+    postList.push(postData);
   });
 
-  // Add interviews to global context
-  globalContext.interviews = {};
-  interviewList.forEach(elem => {
-    globalContext.interviews[elem.id] = elem;
+  // Add posts to global context
+  globalContext.posts = {};
+  postList.forEach(elem => {
+    globalContext.posts[elem.id] = elem;
   });
 
-  globalContext.latest = globalContext.interviewOrder.slice(0,3);
+  globalContext.latest = globalContext.postOrder.slice(0,3);
 
   // Create the directory for output if we need to
-  const interviewOutputDir = path.resolve(PROCESS + OUTPUT + '/interviews');
-  if (!fs.existsSync(interviewOutputDir)) {
-    fs.mkdirSync(interviewOutputDir);
+  const postOutputDir = path.resolve(PROCESS + OUTPUT + '/posts');
+  if (!fs.existsSync(postOutputDir)) {
+    fs.mkdirSync(postOutputDir);
   }
 
-  // Render each interview to file
-  interviewList.forEach(renderInterview);
+  // Render each post to file
+  postList.forEach(renderPost);
 };
 
-const buildWebsite = () => {
-	buildInterviews();
-  buildPages();
-};
-
-buildWebsite();
+// Let's go!
+buildPosts(); // Needs to be done first as pages use post data
+buildPages();

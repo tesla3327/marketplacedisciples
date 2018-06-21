@@ -6,7 +6,7 @@
     <div class="title--image title--image--interviews">
       <div class="content">
         <div class="section section--title">
-          <h1 class="h1 h1--title">Interviews</h1>
+          <h1 class="h1 h1--title">Articles</h1>
         </div>
       </div>
     </div>
@@ -14,13 +14,13 @@
     <div class="content">   
 
       <div class="section section--interviews">
-        <h3 class="h3 section__title">Most popular interviews</h3>
-        {{ interview_list.interview_list(global.popularInterviews, global, pathToRoot, false) }}
+        <h3 class="h3 section__title">Most Popular Articles</h3>
+        {{ interview_list.interview_list(global.popular, global, pathToRoot, false) }}
       </div>
 
       <div class="section section--interviews">
-        <h3 class="h3 section__title">Recent Interviews</h3>
-        {{ interview_list.interview_list(global.interviewOrder, global, pathToRoot, false) }}
+        <h3 class="h3 section__title">Recent Articles</h3>
+        {{ interview_list.interview_list(global.postOrder, global, pathToRoot, false) }}
       </div>
 
       {% include "components/signup_form.html" %}
