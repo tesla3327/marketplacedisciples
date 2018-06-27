@@ -81,7 +81,7 @@ const buildPosts = () => {
     globalContext.posts[elem.id] = elem;
   });
 
-  globalContext.latest = globalContext.postOrder.slice(0,3);
+  globalContext.latest = globalContext.postOrder.slice(0,6);
 
   // Create the directory for output if we need to
   const postOutputDir = path.resolve(PROCESS + OUTPUT + '/posts');

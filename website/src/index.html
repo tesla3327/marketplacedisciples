@@ -28,22 +28,19 @@
           </form>
         </div>
 
-        <!-- As Seen In -->
-        <!-- <div class="section--hero__seen-in">
-          As seen in:
-          <div class="logos">
-            <div>
-              <img src="./img/bam_edited.png"></img>
-            </div>
-            <div>
-              <img src="./img/tce_podcast.jpg"></img>
-            </div>
-          </div>
-        </div> -->
-
         <div class="section--hero__spacer"></div>
       </div>
     </div>
-{% endblock %}
+    <div class="content">
+      <div class="section section--interviews">
+        <h3 class="h3 section__title">Latest Articles</h3>
+        {{ interview_list.interview_list(global.latest, global, pathToRoot, false) }}
+      </div>
+      
+      <p>
+        <a class="link" href="posts.html">See more articles</a>
+      </p>
 
-{% block footer %}{% endblock %}
+      {% include "components/signup_form.html" %}
+    </div>
+{% endblock %}
