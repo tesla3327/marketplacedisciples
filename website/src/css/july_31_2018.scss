@@ -1,5 +1,5 @@
 $base-font: 18px;
-$font-family: 'Lora', sans-serif;
+$font-family: 'Merriweather', sans-serif;
 $rhythm: $base-font * 1.8;
 $gutter: $rhythm;
 
@@ -22,7 +22,7 @@ $accent-secondary: #DDA0DD;
 $body-text: rgba(#e7ebed, 0.9);
 $body-text-dark: saturate(darken($body-text, 45%), 10%);
 
-@import url('https://fonts.googleapis.com/css?family=Rambla:400,700|Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Rambla:400,700|Merriweather:300,300i,900');
 
 body, html {
 	font-size: $base-font;
