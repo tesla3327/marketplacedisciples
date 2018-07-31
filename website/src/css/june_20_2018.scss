@@ -118,7 +118,7 @@ input[type=submit] {
   line-height: 50px;
   color: $body-text;
   top: 2px;
-  left: 1.5rem;
+  left: 1em;
   z-index: 100;
 }
 
@@ -201,12 +201,12 @@ p {
 .content {
   z-index: 1;
   width: 100%;
-  padding: 0 1.5em;
+  padding: 0 1em;
 }
 
 ul, ol {
-	padding: 0 0 $rhythm 0;
-  margin: 0 0 0 1em;
+	padding: 0;
+  margin: 0 0 0 0.5em;
   
   li {
     margin-left: 1em;
@@ -325,7 +325,7 @@ footer {
 .nav__menu-toggle {
   position: fixed;
   top: 11px;
-  right: 1.5rem;
+  right: 1em;
   z-index: 99;
   font-family: 'Rambla', sans-serif;
   font-weight: 700;
@@ -553,6 +553,30 @@ footer {
 	width: 100%;
 }
 
+.img {
+  display: block;
+  margin: $rhythm auto;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 250px;
+
+  &--full-width {
+    // width: calc(100% + 36px);
+    // margin: $rhythm -18px;
+    margin-top: 0;
+    width: 100%;
+    max-height: 200px;
+  }
+
+  &--top {
+    object-position: top;
+  }
+
+  &--bottom {
+    object-position: bottom;
+  }
+}
+
 .article__quote {
   padding: $rhythm * 3/2 0 $rhythm * 3 / 2 $rhythm/2;
 
@@ -684,9 +708,25 @@ footer {
   }
 }
 
+@media (min-width: 500px) {
+  .img {
+    &--full-width {
+      max-height: 300px;
+    }
+  }
+}
+
 @media (min-width: 750px) {
   .content {
     width: inherit;
+  }
+
+  .img {
+    max-height: 400px;
+    
+    &--full-width {
+      max-height: 300px;
+    }
   }
 
 	footer {
@@ -726,20 +766,20 @@ footer {
   }
 
   ul, ol {
-    margin: 0 0 0 2em;
+    margin: 0 0 0 1em;
   }
 
   .section--title {
     margin: 3vw 0;
   }
 
+  .h1--title {
+    font-size: 4.5vw;
+    line-height: 5.5vw;
+  }
+
   .section--hero {
     padding: $rhythm * 2 0;
-
-    .h1--title {
-      font-size: 5.4vw;
-      line-height: 6vw;
-    }
 
     &__tagline {
       font-size: 3.5vw;
