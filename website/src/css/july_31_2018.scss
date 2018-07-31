@@ -555,15 +555,15 @@ footer {
 
 .img {
   display: block;
-  margin: $rhythm auto;
   object-fit: cover;
-  max-width: 100%;
-  max-height: 250px;
+  margin: 0 0 $rhythm auto;
+  width: 100%;
+
+  &:first-child {
+    margin: $rhythm auto;
+  }
 
   &--full-width {
-    // width: calc(100% + 36px);
-    // margin: $rhythm -18px;
-    margin-top: 0;
     width: 100%;
     max-height: 200px;
   }
@@ -721,9 +721,7 @@ footer {
     width: inherit;
   }
 
-  .img {
-    max-height: 400px;
-    
+  .img {   
     &--full-width {
       max-height: 300px;
     }
