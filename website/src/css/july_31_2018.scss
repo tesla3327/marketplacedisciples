@@ -556,12 +556,8 @@ footer {
 .img {
   display: block;
   object-fit: cover;
-  margin: 0 0 $rhythm auto;
+  margin: $rhythm auto;
   width: 100%;
-
-  &:first-child {
-    margin: $rhythm auto;
-  }
 
   &--full-width {
     width: 100%;
