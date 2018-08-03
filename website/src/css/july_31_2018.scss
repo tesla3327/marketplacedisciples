@@ -149,7 +149,8 @@ input[type=submit] {
 }
 
 .interview .h3 {
-  margin-top: $rhythm * 2;
+  margin-top: calc(#{$rhythm} * 2 - 50px);
+  padding-top: calc(#{$rhythm} + 50px);
 }
 
 .h4, .h4 a {
@@ -210,6 +211,7 @@ ul, ol {
   
   li {
     margin-left: 1em;
+    margin-bottom: 0.2em;
   }
 }
 
