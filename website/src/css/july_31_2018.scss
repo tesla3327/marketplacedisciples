@@ -183,7 +183,7 @@ p {
 .link {
 	font-size: $base-font;
 	line-height: $rhythm;
-  color: $body-text;
+  color: $accent;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
 
@@ -907,7 +907,7 @@ footer {
     &::before {
       right: 0;
       width: 100%;
-      background: currentColor;
+      background: $body-text;
     }
 
     &:hover::after {
